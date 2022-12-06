@@ -1,0 +1,2 @@
+class DrivingCourse < ApplicationRecord
+end
