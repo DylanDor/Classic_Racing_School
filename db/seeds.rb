@@ -6,15 +6,15 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-############################# ALL INITIALIZATION ########################
+############################ ALL INITIALIZATION ########################
 
-Stage.destroy_all
+DrivingCourse.destroy_all
 Discount.destroy_all
 Option.destroy_all
 
-############################## STAGES CREATION ##########################
+######################### DRIVING COURSE CREATION ######################
 
-Stage.create(
+DrivingCourse.create(
     title = "Stage de Pilotage Innes Ireland : Demi-Journée",
     description = "Ce stage de pilotage tire son nom du pilote ayant remporté la première course de l’histoire du circuit de Charade en 1958 : Innes Ireland.
     Le stage Innes Ireland est un stage découverte adapté à tous, vous invitant à entrer dans l’univers du sport automobile historique avec 60 minutes passées au volant des monoplaces lors de 3 sessions sur un tracé mythique, faisant partie du patrimoine des circuits mondiaux. 
@@ -29,7 +29,7 @@ Stage.create(
     price = 990,
 )
 
-Stage.create(
+DrivingCourse.create(
     title = "Stage de Pilotage Jim Clark : Journée Complète",
     description = "Ce stage de pilotage est un hommage au pilote le plus populaire des années 60, qui a remporté la première course de Formule 1 du Grand Prix de France à Charade en 1965 sur Lotus : Jim Clark.
     Un stage très complet, totalisant 2 heures en piste, au cours duquel vous pourrez dans un premier temps découvrir certaines techniques de pilotage le matin avant de les approfondir sur l’après-midi. L’objectif est de vous amener à prendre un maximum de plaisir au volant de nos monoplaces sur ce tracé mythique.
@@ -44,7 +44,7 @@ Stage.create(
     price = 1850,
 )
 
-Stage.create(
+DrivingCourse.create(
     title = "Stage de Pilotage Chris Amon : Journée Coaching Avancé",
     description = "En 1972, Chris Amon établit le record ultime du tour à Charade lors du dernier GP de France F1 s’étant déroulé sur cette piste. Son temps ne sera jamais égalé. Ce programme spécial en son nom propose l’expérience la plus poussée que nous pouvons vous offrir sur une journée complète, avec le choix entre le Circuit de Charade et le Circuit de Nogaro.
     Avec 3 heures en piste au Circuit de Charade (ou 2h30 au Circuit de Nogaro) vous serez amenés à progressez grâce à des outils et une pédagogie spécialement dédiés à ce stage de pilotage. Bénéficiant d’un coach par binôme, vous aurez l’opportunité de progresser d’une session à une autre grâce à l’analyse de vos vidéos et chronos embarqués, tout en travaillant certaines techniques propres au pilotage d’une monoplace de course historique.
@@ -59,7 +59,7 @@ Stage.create(
     price = 2590,
 )
 
-Stage.create(
+DrivingCourse.create(
     title = "Stage de Pilotage Jackie Stewart : Coaching Avancé 2-jours",
     description = "Stage de pilotage résultant de la combinaison des nos programmes Chris Amon et Jim Clark sur 2 jours.
     Avec plus de 5 heures de roulage en piste, vous vivrez non seulement une des meilleures expériences de pilotage en monoplace historique au volant de nos Crosslé 90F, mais c’est avant tout votre technique de pilotage que vous pourrez approfondir grâce à notre encadrement personnalisé associé à notre expérience en tant qu’écurie de compétition, que vous intégrerez comme pilote durant l’équivalent d’un week-end complet. La première journée de vendredi vous permettra d’évoluer en comité réduit.
@@ -73,7 +73,7 @@ Stage.create(
     price = 4290,
 )
 
-Stage.create(
+DrivingCourse.create(
     title = "Expérience Baptême sport-prototype",
     description = "Probablement la meilleure façon de découvrir le circuit de Charade en passager avec la seule expérience de baptême historique en son genre. Entrez dans son histoire en découvrant ce tracé mythique aux côtés d’un pilote professionnel qui saura exploiter tout le potentiel d’un véritable sport-prototype de 1966 : une Crosslé 9S. Produite à 73 exemplaires seulement, le châssis proposé est le dernier sorti d’usine.
 
