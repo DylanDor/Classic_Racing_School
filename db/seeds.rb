@@ -24,7 +24,7 @@ DrivingCourse.create(
     Jusqu’à 18 pilotes par séance.
     
     8h00 – 14h00 ou 12h00 – 18h00",
-    date: 15-04-2023,
+    date: '2023-04-15 08:00',
     quantity: 18,
     price: 990,
 )
@@ -39,7 +39,7 @@ DrivingCourse.create(
     Jusqu’à 18 pilotes par séance.
     
     8h00 – 18h00",
-    date: 15-04-2023,
+    date: '2023-04-15 08:00',
     quantity: 18,
     price: 1850,
 )
@@ -54,7 +54,7 @@ DrivingCourse.create(
     Jusqu’à 12 pilotes par séance.
     
     Programme : 8h00 – 18h00",
-    date: 12-05-2023,
+    date: '2023-05-12 08:00',
     quantity: 12,
     price: 2590,
 )
@@ -68,7 +68,7 @@ DrivingCourse.create(
     
     Limité à 12 pilotes sur le vendredi et 18 sur le samedi (pilotes du stage Jim Clark inclus).
     Jour 1: 08h00 – 19h00 & Jour 2: 08h00 – 18h00",
-    date: 23-06-2023,
+    date: '2023-06-23 08:00',
     quantity: 12,
     price: 4290,
 )
@@ -79,8 +79,8 @@ DrivingCourse.create(
 
     Entrez dans son histoire en découvrant ce tracé mythique aux côtés d’un pilote professionnel qui saura exploiter tout le potentiel d’un véritable sport-prototype de 1966 : la Crosslé 9S, une vraie voiture de course historique avec 240 chevaux et 550 kgs !
     
-    Cette expérience en voiture de course est le cadeau parfait pour un passionné de sensations fortes, réservez maintenant comme bon cadeau, valable pendant 12 mois !",
-    date: 15-04-2023,
+    Cette 'expérience en voiture de course est le cadeau parfait pour un passionné de sensations fortes, réservez maintenant comme bon cadeau, valable pendant 12 mois !",
+    date: '2023-04-15 08:00',
     quantity: 7,
     price: 150,
 )
