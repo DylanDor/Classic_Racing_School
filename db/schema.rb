@@ -10,14 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_06_112347) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_06_122352) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "carts", force: :cascade do |t|
-    t.integer "total"
+  create_table "cart_items", force: :cascade do |t|
+    t.bigint "cart_id"
+    t.bigint "driving_courses_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["cart_id"], name: "index_cart_items_on_cart_id"
+    t.index ["driving_courses_id"], name: "index_cart_items_on_driving_courses_id"
+  end
+
+  create_table "carts", force: :cascade do |t|
+    t.integer "total"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_carts_on_user_id"
   end
 
   create_table "driving_courses", force: :cascade do |t|
@@ -45,6 +56,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_06_112347) do
     t.datetime "updated_at", null: false
   end
 
+<<<<<<< HEAD
+=======
   create_table "promos", force: :cascade do |t|
     t.string "name"
     t.float "discount"
@@ -52,6 +65,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_06_112347) do
     t.datetime "updated_at", null: false
   end
 
+>>>>>>> development
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
