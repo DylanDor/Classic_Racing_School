@@ -454,3 +454,30 @@ input[type=range]::-moz-focus-outer {
 .form-radio:focus {
     @apply ring-0;
 }
+
+/* Customize colors */
+
+.bg-gold{
+  --tw-bg-opacity: 1;
+  background-color: rgb(174 141 89 / var(--tw-bg-opacity));
+}
+
+.text-gold {
+  --tw-text-opacity: 1;
+  color: rgb(174 141 89 / var(--tw-text-opacity));
+}
+
+.border-gold {
+  --tw-border-opacity: 1;
+  border-color: rgb(174 141 89 / var(--tw-border-opacity));
+}
+
+.hover\:bg-gold:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(152 126 76 / var(--tw-bg-opacity));;
+}
+
+.hover\:border-gold:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(152 126 76 / var(--tw-border-opacity));
+}
