@@ -2,6 +2,11 @@
 
 <%= render @driving_course %>
 
+<%= form_tag checkout_create_path, method: :post, data: { turbo: false } do %>
+<input type="hidden" name="total" value="1000" />
+<%= submit_tag "Buy Now -  1000  €" %>
+<% end %>
+
 <div>
   <%= link_to "Edit this driving course", edit_driving_course_path(@driving_course) %> |
   <%= link_to "Back to driving courses", driving_courses_path %>
