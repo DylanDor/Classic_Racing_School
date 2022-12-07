@@ -1,14 +1,12 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Driving courses</h1>
-
-<div id="driving_courses">
+<div class="m-20">
+<div id="driving_courses" class="grid grid-cols-12 gap-6 flex space-x-2 md:space-x-8 ">
   <% @driving_courses.each do |driving_course| %>
     <%= render driving_course %>
-    <p>
-      <%= link_to "Show this driving course", driving_course %>
-    </p>
   <% end %>
 </div>
+</div>
 
-<%= link_to "New driving course", new_driving_course_path %>
+
+
