@@ -6,6 +6,7 @@ ruby "3.0.0"
 gem "table_print"
 gem 'dotenv-rails'
 gem 'devise'
+gem 'stripe'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4"
