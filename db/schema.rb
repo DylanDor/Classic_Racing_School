@@ -24,9 +24,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_06_152655) do
   end
 
   create_table "carts", force: :cascade do |t|
-    t.integer "total"
+    t.float "total"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_carts_on_user_id"
   end
 
   create_table "driving_courses", force: :cascade do |t|
@@ -57,8 +59,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_06_152655) do
 
   create_table "orders", force: :cascade do |t|
     t.float "total"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "promos", force: :cascade do |t|
