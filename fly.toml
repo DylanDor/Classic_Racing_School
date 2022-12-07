@@ -1,6 +1,6 @@
-# fly.toml file generated for classicracingschool on 2022-12-06T20:05:44+01:00
+# fly.toml file generated for classic-racing-school on 2022-12-07T00:58:16+01:00
 
-app = "classicracingschool"
+app = "classic-racing-school"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
