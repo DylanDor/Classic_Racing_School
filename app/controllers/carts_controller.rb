@@ -8,6 +8,8 @@ class CartsController < ApplicationController
 
   # GET /carts/1 or /carts/1.json
   def show
+    @cart = current_user.cart
+    @cart_items = @cart.cart_items
   end
 
   # GET /carts/new
