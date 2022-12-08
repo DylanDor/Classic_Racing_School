@@ -23,9 +23,12 @@
                   </div>
               </div>
           
-          <div class="block flex-1 text-right text-sm text-slate-600 hover:text-slate-800 font-medium px-3 py-4 group" >
-                  <div class="flex justify-right">
-                    <a class="btn-sm w-full bg-gold hover:text-neutral-900 text-white uppercase" href="#0">Réservez maintenant</a>
+          <div class="block flex-1 text-center text-sm text-slate-600 hover:text-slate-800 font-medium px-3 py-4 group" >
+                  <div class="flex justify-center">
+                    <%= form_with(url: cart_items_path, method: :post) do |f| %>
+                        <%= f.hidden_field :id, value: driving_course.id %>
+                        <%= f.submit "Réservez maintenant", class: "btn-sm w-full bg-gold text-white uppercase" %>
+                    <% end %>
                   </div>
               </div>
           </div>
