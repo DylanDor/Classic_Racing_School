@@ -8,6 +8,7 @@ class DrivingCoursesController < ApplicationController
 
   # GET /driving_courses/1 or /driving_courses/1.json
   def show
+    @driving_course = DrivingCourse.find(params[:id])
   end
 
   # GET /driving_courses/new
