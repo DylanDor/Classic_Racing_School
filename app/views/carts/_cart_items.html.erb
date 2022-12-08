@@ -21,7 +21,9 @@
                         </div>
                     </div>
                 </div>
-                <button class="text-white text-sm underline hover:no-underline">Remove</button>
+                    <%= form_with(url: cart_item_path(item.id), method: :delete) do |f| %>  
+                        <%= f.submit "Supprimer du panier", class: "text-white text-sm underline hover:no-underline" %>
+                    <% end %>
             </div>
         </div>
     </li>

@@ -45,11 +45,9 @@ class CartItemsController < ApplicationController
 
   # DELETE /cart_items/1 or /cart_items/1.json
   def destroy
-    @cart_item.destroy
-
-    respond_to do |format|
-      format.html { redirect_to cart_items_url, notice: "Cart item was successfully destroyed." }
-      format.json { head :no_content }
+    if @cart_item.destroy 
+     remove_to_total
+     redirect_to cart_path(current_user.cart.id)
     end
   end
 
@@ -63,4 +61,10 @@ class CartItemsController < ApplicationController
       cart = Cart.find(current_user.cart.id)
       cart.update(total:  (cart.total + @cart_item.driving_course.price))
     end
+
+    def remove_to_total
+      cart = Cart.find(current_user.cart.id)
+      cart.update(total:  (cart.total - @cart_item.driving_course.price))
+    end
+  
 end
