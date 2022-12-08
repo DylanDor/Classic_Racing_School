@@ -16,11 +16,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_07_140330) do
 
   create_table "cart_items", force: :cascade do |t|
     t.bigint "cart_id"
-    t.bigint "driving_courses_id"
+    t.bigint "driving_course_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["cart_id"], name: "index_cart_items_on_cart_id"
-    t.index ["driving_courses_id"], name: "index_cart_items_on_driving_courses_id"
+    t.index ["driving_course_id"], name: "index_cart_items_on_driving_course_id"
   end
 
   create_table "carts", force: :cascade do |t|
@@ -53,10 +53,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_07_140330) do
   end
 
   create_table "order_items", force: :cascade do |t|
-    t.bigint "driving_courses_id"
+    t.bigint "driving_course_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["driving_courses_id"], name: "index_order_items_on_driving_courses_id"
+    t.index ["driving_course_id"], name: "index_order_items_on_driving_course_id"
   end
 
   create_table "orders", force: :cascade do |t|
