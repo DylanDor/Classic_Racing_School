@@ -9,9 +9,9 @@
             <!-- Card body -->
             <div class="grow">
                 <header class="mb-2">
-                    <h3 class="text-lg text-gold font-semibold mb-1"><%= driving_course.title %></h3>
-                    <div class="text-sm"> <%= driving_course.description %></div>
-                    <div class="text-sm"> <%= driving_course.date %></div>
+                    <h3 class="text-lg text-gold font-semibold mb-1"><%= driving_course.title %> </h3>
+                    <div class="text-sm"> <%= driving_course.description %> </div>
+                    <div class="text-sm"> <%= driving_course.date %> </div>
                 </header>
             </div>
           <!-- footer card -->
@@ -25,7 +25,7 @@
           
           <div class="block flex-1 text-right text-sm text-slate-600 hover:text-slate-800 font-medium px-3 py-4 group" >
                   <div class="flex justify-right">
-                    <a class="btn-sm w-full bg-gold hover:text-neutral-900 text-white uppercase" href="#0">Réservez maintenant</a>
+                    <%= link_to "Réservez maintenant", driving_course, class: "btn-sm w-full bg-gold hover:text-neutral-900 text-white uppercase" %>
                   </div>
               </div>
           </div>
@@ -33,13 +33,13 @@
 
 
 
-            <!-- Rating and price -->
-          <!--  <div class="flex flex-wrap justify-between items-center">-->
+        <!-- Rating and price -->
+            <!--  <div class="flex flex-wrap justify-between items-center">-->
                 <!-- Price -->
                 <!--<div><p class="uppercase"> à partir de </p>
                     <div class="inline-flex text-xl font-semibold bg-gold text-white rounded-full text-center px-2 py-0.5"><%= driving_course.price %>€</div>
-                </div>
-            </div>-->
+            </div>
+        </div>-->
         </div>
     </div>
 </div>
