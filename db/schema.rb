@@ -53,10 +53,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_07_140330) do
   end
 
   create_table "order_items", force: :cascade do |t|
+    t.bigint "order_id"
     t.bigint "driving_course_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["driving_course_id"], name: "index_order_items_on_driving_course_id"
+    t.index ["order_id"], name: "index_order_items_on_order_id"
   end
 
   create_table "orders", force: :cascade do |t|
