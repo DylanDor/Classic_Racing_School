@@ -23,7 +23,6 @@ class CartItemsController < ApplicationController
   def create
     @cart_item = CartItem.new(cart_id: current_user.cart.id, driving_course_id: params[:id])
       if @cart_item.save
-        add_to_total
         redirect_to cart_path(current_user.cart.id)
       else
         redirect_to :root
@@ -46,7 +45,6 @@ class CartItemsController < ApplicationController
   # DELETE /cart_items/1 or /cart_items/1.json
   def destroy
     if @cart_item.destroy 
-     remove_to_total
      redirect_to cart_path(current_user.cart.id)
     end
   end
@@ -57,14 +55,4 @@ class CartItemsController < ApplicationController
       @cart_item = CartItem.find(params[:id])
     end
 
-    def add_to_total
-      cart = Cart.find(current_user.cart.id)
-      cart.update(total:  (cart.total + @cart_item.driving_course.price))
-    end
-
-    def remove_to_total
-      cart = Cart.find(current_user.cart.id)
-      cart.update(total:  (cart.total - @cart_item.driving_course.price))
-    end
-  
 end
