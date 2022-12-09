@@ -20,4 +20,12 @@ class Order < ApplicationRecord
         self.user.cart.cart_items.destroy_all
     end
 
+    def total_price
+        total = 0
+        self.order_items.each do |order_item|
+          total += order_item.driving_course.price
+        end
+        return total
+    end
+
 end

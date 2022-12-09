@@ -33,7 +33,7 @@
 
                     <li class="text-sm w-full flex justify-between py-3 border-b border-slate-200">
                         <div>Total du panier</div>
-                        <div class="font-medium text-emerald-600"><%= @cart.total %></div>
+                        <div class="font-medium text-emerald-600"><%= @total_price %></div>
                     </li>
                 </ul>
                 <!-- Promo box -->
@@ -47,8 +47,8 @@
                 </div>
                 <div class="mb-4">
                     <%= form_tag checkout_create_path, method: :post, data: { turbo: false } do %>
-                    <input type="hidden" name="total" value="<%= @cart.total %>" />
-                    <%= submit_tag "Buy Now - #{@cart.total}  €", class: "btn w-full bg-gold hover:bg-gold text-white" %>
+                    <input type="hidden" name="total" value="<%= @total_price %>" />
+                    <%= submit_tag "Buy Now - #{@total_price}  €", class: "btn w-full bg-gold hover:bg-gold text-white" %>
                     <% end %>
                 </div>
                 <div class="text-xs text-slate-500 italic text-center">Racing School Group vous remercie de votre réservation <a class="underline hover:no-underline" href="#0">Terms</a>.</div>
