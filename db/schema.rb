@@ -24,7 +24,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_07_140330) do
   end
 
   create_table "carts", force: :cascade do |t|
-    t.float "total"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -62,7 +61,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_07_140330) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.float "total"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
