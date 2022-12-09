@@ -1,5 +1,6 @@
 class CartsController < ApplicationController
   before_action :set_cart, only: %i[ show edit update destroy ]
+  before_action :update_total_price
 
   # GET /carts or /carts.json
   def index
@@ -68,5 +69,14 @@ class CartsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def cart_params
       params.require(:cart).permit(:total)
+    end
+
+    def update_total_price
+      cart = Cart.find(current_user.cart.id)
+      total_price = 0
+      cart.cart_items.each do |cart_item|
+        total_price += cart_item.driving_course.price
+      end
+      cart.update(total: total_price)
     end
 end
