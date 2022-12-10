@@ -1,9 +1,68 @@
-<div>
-  <p> Mon compte :</p><br>
-  <p> Email : <%= @user.email %> </p>
+<div class="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-9xl mx-auto shadow-3xl">
+
+    <!-- Page header -->
+
+
+    <div class="bg-white shadow-lg rounded-sm mb-8">
+        <div class="flex flex-col md:flex-row md:-mr-px">
+
+            <!-- Sidebar -->
+                <%= render 'users/sidedashboard' %>
+            
+            <!-- Panel -->
+            <div class="grow">
+
+                <!-- Panel body -->
+                <div class="p-6 space-y-6">
+                    <h2 class="text-2xl text-slate-800 font-bold mb-5">Editer mon profil</h2>
+                <hr>
+
+
+                    <!-- Business Profile -->
+                    <section>
+                        <h3 class="text-xl leading-snug text-slate-800 font-bold mb-1">Vos informations </h3>
+                        <div class="text-sm">Ceci n'est pas obligatoire.</div>
+                        <div class="sm:flex sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-5">
+                            <div class="sm:w-1/3">
+                                <label class="block text-sm font-medium mb-1" for="name">Nom</label>
+                                <input id="name" class="form-input w-full" type="text" value="Votre nom" />
+                            </div>
+                            <div class="sm:w-1/3">
+                                <label class="block text-sm font-medium mb-1" for="business-id">Prénom</label>
+                                <input id="business-id" class="form-input w-full" type="text" value="Votre prénom" />
+                            </div>
+                        </div>
+                    </section>
+
+                
+
+                    <!-- Password -->
+                    <section>
+                        <h3 class="text-xl leading-snug text-slate-800 font-bold mb-1">Mot de passe</h3>
+                        <div class="text-sm">Vous souhaitez changer votre mot de passe ? </div>
+                        <div class="mt-5">
+                            <button class="btn border-slate-200 shadow-sm text-gold">Cliquez ici</button>
+                        </div>
+                    </section>
+
+                    
+                    
+                </div>
+
+                <!-- Panel footer -->
+                <footer>
+                    <div class="flex flex-col px-6 py-5 ">
+                        <div class="flex self-end">
+                            <button class="btn border-slate-200 hover:border-slate-300 text-gold">Annuler</button>
+                            <button class="btn-sm w-full bg-gold hover:bg-gold text-white ml-3">Sauvegarder les changements</button>
+                        </div>
+                    </div>
+                </footer>
+
+            </div>
+
+        </div>
+    </div>
+
 </div>
-<br><br><br>
-<div>
-  <%= link_to "Editer mon compte", edit_user_path(@user) %> 
-  <%= button_to "Supprimer mon compte", @user, method: :delete %>
-</div>
+
