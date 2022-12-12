@@ -3,9 +3,9 @@ class Order < ApplicationRecord
     after_create :fill_order, :empty_cart, :copy_to_spreadsheet
 
     belongs_to :user
-    has_many :order_items
     has_many :driving_courses, through: :order_items
-    #has_many :options, through: :order_items
+    has_many :options, through: :order_items
+    has_many :order_items
     #belongs_to :payment_detail
 
     private
