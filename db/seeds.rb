@@ -27,7 +27,7 @@ DrivingCourse.create(
     date: '2023-04-15 08:00',
     quantity: 18,
     price: 990,
-    img_url: "stage-pilotage-monoplace.jpg",
+    img_url: "stage-pilotage-monoplace1.jpg",
 )
 
 DrivingCourse.create(
@@ -43,7 +43,7 @@ DrivingCourse.create(
     date: '2023-04-15 08:00',
     quantity: 18,
     price: 1850,
-    img_url: "stage-pilotage-monoplace.jpg",
+    img_url: "stage-pilotage-monoplace2.jpg",
 )
 
 DrivingCourse.create(
@@ -59,7 +59,7 @@ DrivingCourse.create(
     date: '2023-05-12 08:00',
     quantity: 12,
     price: 2590,
-    img_url: "stage-pilotage-monoplace.jpg",
+    img_url: "stage-pilotage-monoplace3.jpg",
 )
 
 DrivingCourse.create(
@@ -74,7 +74,7 @@ DrivingCourse.create(
     date: '2023-06-23 08:00',
     quantity: 12,
     price: 4290,
-    img_url: "stage-pilotage-monoplace.jpg",
+    img_url: "stage-pilotage-monoplace4.jpg",
 )
 
 DrivingCourse.create(
@@ -87,7 +87,7 @@ DrivingCourse.create(
     date: '2023-04-15 08:00',
     quantity: 7,
     price: 150,
-    img_url: "stage-pilotage-monoplace.jpg",
+    img_url: "stage-pilotage-monoplace5.jpg",
 )
 
 ############################## DISCOUNTS CREATION ##########################
