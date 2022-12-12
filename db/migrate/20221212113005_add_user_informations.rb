@@ -6,7 +6,6 @@ class AddUserInformations < ActiveRecord::Migration[7.0]
     add_column :users, :birthday, :date
     add_column :users, :newsletter, :boolean
     add_column :users, :phone, :string
-    add_column :users, :welcome_day, :date
     add_column :users, :height, :integer
     add_column :users, :weight, :integer
     add_column :users, :clothing_size, :string
@@ -16,7 +15,6 @@ class AddUserInformations < ActiveRecord::Migration[7.0]
     add_column :users, :driving_experience_specifics, :text
     add_column :users, :coaching_expectations, :text
     add_column :users, :food_restriction, :text
-    add_column :users, :number_of_companions, :integer
     add_column :users, :address, :string
     add_column :users, :medical_contraindication, :text
     add_column :users, :how_know_CRS, :text
