@@ -16,13 +16,10 @@ Option.destroy_all
 
 DrivingCourse.create(
     title: "Stage de Pilotage Innes Ireland : Demi-Journée",
-    description: "Ce stage de pilotage tire son nom du pilote ayant remporté la première course de l’histoire du circuit de Charade en 1958 : Innes Ireland.
-    Le stage Innes Ireland est un stage découverte adapté à tous, vous invitant à entrer dans l’univers du sport automobile historique avec 60 minutes passées au volant des monoplaces lors de 3 sessions sur un tracé mythique, faisant partie du patrimoine des circuits mondiaux. 
+    description: "Une introduction au pilotage sur circuit complète et adaptée à tous, vous invitant à entrer dans l’univers du sport automobile historique avec plus de 45 minutes passées au volant des monoplaces de course lors de 3 sessions sur un tracé mythique, faisant partie du patrimoine des circuits mondiaux.  
     
     L’encadrement est adapté au niveau de chacun, avec des débriefings personnalisés entre chaque session de roulage en piste suite aux notes prises par notre corps d’instructeurs. Un accompagnement premium agrémenté d’une ambiance vintage très familiale.
-    
-    Jusqu’à 18 pilotes par séance.
-    
+    Jusqu’à 18 pilotes par séance.  
     8h00 – 14h00 ou 12h00 – 18h00",
     date: '2023-04-15 08:00',
     quantity: 18,
@@ -32,11 +29,13 @@ DrivingCourse.create(
 
 DrivingCourse.create(
     title: "Stage de Pilotage Jim Clark : Journée Complète",
-    description: "Ce stage de pilotage est un hommage au pilote le plus populaire des années 60, qui a remporté la première course de Formule 1 du Grand Prix de France à Charade en 1965 sur Lotus : Jim Clark.
-    Un stage très complet, totalisant 2 heures en piste, au cours duquel vous pourrez dans un premier temps découvrir certaines techniques de pilotage le matin avant de les approfondir sur l’après-midi. L’objectif est de vous amener à prendre un maximum de plaisir au volant de nos monoplaces sur ce tracé mythique.
-    
-    L’encadrement est adapté au niveau de chacun, avec des débriefings personnalisés entre chaque session de roulage en piste suite aux notes prises par notre corps d’instructeurs. Un accompagnement premium agrémenté d’une ambiance vintage très familiale.
+    description: "Un stage de pilotage très complet, totalisant plus de 1h30 sur circuit, au cours duquel vous pourrez dans 
+    un premier temps découvrir certaines techniques de pilotage le matin avant de les approfondir sur l’après-midi.
+    L’objectif étant de vous amener à prendre un maximum de plaisir au volant de nos monoplaces sur ce tracé mythique.
 
+    L’encadrement est adapté au niveau de chacun, avec des débriefings personnalisés 
+    entre chaque session de roulage en piste suite aux notes prises par notre corps d’instructeurs.
+    
     Jusqu’à 18 pilotes par séance.
     
     8h00 – 18h00",
