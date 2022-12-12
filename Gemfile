@@ -8,6 +8,7 @@ gem "table_print"
 gem 'devise'
 gem 'stripe'
 gem 'google_drive'
+gem "administrate"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4"
