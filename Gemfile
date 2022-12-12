@@ -7,6 +7,8 @@ gem "table_print"
 gem 'dotenv-rails'
 gem 'devise'
 gem 'stripe'
+gem 'rails_admin', '~> 3.0'
+
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4"
@@ -78,3 +80,4 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+gem "sassc-rails"
