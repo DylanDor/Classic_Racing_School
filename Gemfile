@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "3.0.0"
 
 gem "table_print"
-gem 'dotenv-rails'
+#gem 'dotenv-rails'
 gem 'devise'
 gem 'stripe'
 gem 'google_drive'
