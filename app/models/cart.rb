@@ -1,8 +1,8 @@
 class Cart < ApplicationRecord
     belongs_to :user
+    has_many :cart_items
     has_many :driving_courses, through: :cart_items
     has_many :options, through: :cart_items
-    has_many :cart_items
 
     def total_price
         total = 0
