@@ -1,4 +1,4 @@
-# fly.toml file generated for classic-racing-school on 2022-12-09T18:49:16+01:00
+# fly.toml file generated for classic-racing-school on 2022-12-13T13:01:48+01:00
 
 app = "classic-racing-school"
 kill_signal = "SIGINT"
