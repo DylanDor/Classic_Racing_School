@@ -10,31 +10,22 @@ class User < ApplicationRecord
   has_one :cart
 
   validates :email, presence: true, uniqueness: true
-  validates :first_name, presence: true, length: {in: 3..100, message: "First Name lenght must be between 3 and 100" }
-  validates :last_name, presence: true, length: {in: 3..100, message: "Last Name lenght must be between 3 and 100" }
-  validates :birthday, presence: true, if: :in_the_past
-  validates :newsletter, presence: true
-  validates :phone, presence: true
-  validates :height, presence: true, numericality: {greater_than_or_equal_to: 0, message: "Height must be positive"}
-  validates :weight, presence: true, numericality: {greater_than_or_equal_to: 0, message: "Weight must be positive"}
-  validates :clothing_size, presence: true
-  validates :helmet_size, presence: true
-  validates :shoe_size, presence: true
-  validates :driving_experience, presence: true
-  validates :driving_experience_specifics, presence: true, length: {in: 1..1000, message: "Drinving Experience Specifics lenght must be between 1 and 1000" }
-  validates :coaching_expectations, presence: true, length: {in: 1..1000, message: "Coaching Expectations lenght must be between 1 and 1000" }
-  validates :food_restriction, presence: true, length: {in: 1..1000, message: "Food Restriction lenght must be between 1 and 1000" }
-  validates :address, presence: true, length: {in: 10..250, message: "Address lenght must be between 10 and 250" }
-  validates :medical_contraindication, presence: true, length: {in: 1..1000, message: "Medical Contraindication lenght must be between 1 and 1000" }
-  validates :how_know_CRS, presence: true
-  validates :people_who_recommended, presence: true, length: {in: 1..1000, message: "People who recommended lenght must be between 1 and 1000" }
-  validates :comments_to_organization, presence: true, length: {in: 1..1000, message: "Comments to Organization lenght must be between 1 and 1000" }
-  validates :photo_publication_consent, presence: true
-  validates :instagram_nickname, presence: true, length: {in: 1..1000, message: "Instagram Nickname lenght must be between 1 and 1000" }
-  validates :personal_data_consent, presence: true
+  validates :first_name, length: {in: 3..100, message: "Votre Nom doit avoir une longueur comprise entre 3 and 100 caractères" }
+  validates :last_name, length: {in: 3..100, message: "Votre Prénom doit avoir une longueur comprise entre 3 and 100 caractères" }
+  validates :birthday, if: :in_the_past
+  validates :height, numericality: {greater_than: 0, message: "Votre taille doit être positive"}
+  validates :weight, numericality: {greater_than: 0, message: "Votre poids doit être positif"}
+  validates :driving_experience_specifics, length: {in: 1..1000, message: "Les détails de votre Expérience de Pilotage doivent avoir une longueur comprise entre 1 et 1000 caractères" }
+  validates :coaching_expectations, length: {in: 1..1000, message: "Vos Attentes de Coaching doivent avoir une longueur comprise entre 1 et 1000 caractères" }
+  validates :food_restriction, length: {in: 1..1000, message: "Vos Restrictions Alimentaires doivent avoir une longueur comprise entre 1 et 1000 caractères" }
+  validates :address, length: {in: 10..250, message: "Votre Adresse doit avoir une longueur comprise entre 10 et 250 caractères" }
+  validates :medical_contraindication, length: {in: 1..1000, message: "Vos Contre-indications Médicales doivent avoir une longueur comprise entre 1 et 1000 caractères" }
+  validates :people_who_recommended,length: {in: 1..1000, message: "La liste des Personnes qui vous ont recommandé notre entreprise doit avoir une longueur comprise entre 1 et 1000 caractères" }
+  validates :comments_to_organization, length: {in: 1..1000, message: "Vos Commentaires concernant l'Organisation doivent avoir une longueur comprise entre 1 et 1000 caractères" }
+  validates :instagram_nickname, length: {in: 3..250, message: "Votre pseudo Instagram doit avoir une longueur comprise entre 3 et 250 caractères" }
 
   def in_the_past
-    errors.add(:birthday, "You can't be born in the future...") unless birthday < Date.now
+    errors.add(:birthday, "Conflit temporel : Vous ne pouvez pas être né dans le futur...") unless birthday < Date.now
   end
 
   private
