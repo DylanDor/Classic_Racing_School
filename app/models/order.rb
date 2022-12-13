@@ -56,11 +56,28 @@ class Order < ApplicationRecord
 
         # Changes content of cells.
         # Changes are not sent to the server until you call ws.save().
-        row = 2 
+        row = 3 
+        while ws[row, 1] != ""
+            row += 1
+        end
         self.order_items.each do |item|
-            ws[row, 1] = self.user.email
-            ws[row, 2] = item.driving_course.title
-            ws[row, 3] = item.driving_course.price
+            ws[row, 1] = "date"
+            ws[row, 2] = "numéro de place"
+            ws[row, 3] = "contact CRS"
+            ws[row, 4] = item.driving_course.title
+            ws[row, 5] = self.user.last_name
+            ws[row, 6] = self.user.first_name
+            ws[row, 7] = self.user.phone
+            ws[row, 8] = self.user.email
+            ws[row, 9] = "Pays"
+            ws[row, 10] = ""
+            ws[row, 11] = ""
+            ws[row, 12] = ""
+            ws[row, 13] = ""
+            ws[row, 14] = ""
+            ws[row, 15] = "En ligne"
+            ws[row, 16] = "Paiement validé"
+            ws[row, 17] = item.driving_course.price
             ws.save
             row = row + 1
         end
