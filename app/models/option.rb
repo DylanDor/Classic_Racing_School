@@ -8,5 +8,5 @@ class Option < ApplicationRecord
     validates :description, presence: true, length: {in: 10..2000, message: "La Description doit avoir une longueur comprise entre 10 and 1000 caractères" }
     validates :quantity, presence: true, numericality: {greater_than: 0, message: "La Quantité doit être positive"}
     validates :price, presence: true, numericality: {greater_than_or_equal_to: 0, message: "Le Prix doit être positif ou égal à zéro"}
-    validates :image_url, presence: true
+    validates :img_url, presence: true
 end
