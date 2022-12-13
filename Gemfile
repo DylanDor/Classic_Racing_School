@@ -8,6 +8,7 @@ gem 'dotenv-rails'
 gem 'devise'
 gem 'stripe'
 gem 'google_drive'
+gem "administrate", github: "n-studio/administrate", branch: "compile-assets"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4"
