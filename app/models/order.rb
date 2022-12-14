@@ -1,6 +1,7 @@
 class Order < ApplicationRecord
 
-    after_create :fill_order, :empty_cart, :copy_to_spreadsheet
+
+    after_create :fill_order, :empty_cart, :copy_to_spreadsheet, :order_send
 
     belongs_to :user
     has_many :order_items
@@ -17,6 +18,11 @@ class Order < ApplicationRecord
     end
 
     private
+
+    def order_send
+        #AdminMailer.order_send(self).deliver_now
+        UserMailer.order_confirmation_user(self).deliver_now
+      end
 
     def fill_order
         self.user.cart.cart_items.each do |cart_item|

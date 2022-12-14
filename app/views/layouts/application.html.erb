@@ -49,19 +49,19 @@
                           </div>
                           <ul>
                             <% if current_user.admin == true %>
-                              <li><%= link_to "Dashboard Admin", admin_users_path, class: "font-medium text-sm text-neutral-900 hover:text-gold flex items-center py-1 px-3" %></li>
+                              <li><%= link_to "Gestion Admin", admin_users_path, class: "font-medium text-sm text-neutral-900 hover:text-gold flex items-center py-1 px-3" %></li>
                             <% end %>
                             <li><%= link_to "Mon Compte", user_path(current_user.id), class: "font-medium text-sm text-neutral-900 hover:text-gold flex items-center py-1 px-3" %></li>
                             <li><%= link_to "Mes Commandes", orders_path, class: "font-medium text-sm text-neutral-900 hover:text-gold flex items-center py-1 px-3" %></li>
                           </ul>
                           <ul>
-                              <li><%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "font-medium text-sm text-gold hover:text-gold flex items-center py-1 px-3" %></li>
+                              <li><%= button_to "Déconnexion", destroy_user_session_path, method: :delete, class: "font-medium text-sm text-gold hover:text-gold flex items-center py-1 px-3" %></li>
                           </ul>                
                       </div>
                     </div>
                   <% else %>
-                      <%= link_to "Sign in", new_user_session_path, class: "btn bg-gold hover:bg-gold text-white" %>
-                      <%= link_to "Sign up", new_user_registration_path, class: "btn border-gold hover:border-gold text-gold" %>
+                      <%= link_to "Connexion", new_user_session_path, class: "btn bg-gold hover:bg-gold text-white" %>
+                      <%= link_to "Inscription", new_user_registration_path, class: "btn border-gold hover:border-gold text-gold" %>
                   <% end %>
                 </div>
             </div>
