@@ -3,7 +3,7 @@
 
 First real team project, students of The Hacking Projet school.
 
--  Link : [New Classic Racing School](https://classic-racing-school.fly.dev/) 
+ -  Link : [New Classic Racing School](https://classic-racing-school.fly.dev/) 
 
 # Context
 
@@ -25,13 +25,43 @@ This is where we come in by proposing an app in addition to the existing site.
 
  - [Tailwind Mosaic](https://cruip.com/demos/mosaic/)
 
+ ## Gems & APIs
+
+ - [Devise](https://github.com/heartcombo/devise)
+ - [Stripe](https://stripe.com/)
+ - [Google Drive](https://console.cloud.google.com/apis/library/drive.googleapis.com?pli=1&project=engaged-wonder-369614)
+ - [Sendinblue](https://fr.sendinblue.com/)
+ - [Administrate](https://github.com/thoughtbot/administrate)
 
 
 ## Authors
-- [@Maëva](https://github.com/MaevaGilles)
-- [@Dylan](https://github.com/DylanDor)
-- [@Yann](https://github.com/YannGUIOT)
-- [@Jean-Baptiste](https://github.com/JBE29)
-- [@Gillian](https://github.com/GillianLEVERT)
+ - [@Maëva](https://github.com/MaevaGilles)
+ - [@Dylan](https://github.com/DylanDor)
+ - [@Yann](https://github.com/YannGUIOT)
+ - [@Jean-Baptiste](https://github.com/JBE29)
+ - [@Gillian](https://github.com/GillianLEVERT)
 
 Mentor - [@Nicolas HERMET](https://github.com/Nicolas-Hermet)
+
+
+## How to use (local version)
+
+Fork or Download ZIP, then use this command for installing framework & gem :
+
+`bundle install`
+
+`npm install`
+
+`rails assets:precompile`
+
+`rails db:create`
+
+`rails db:migrate`
+
+`rails db:seed`
+
+Then launch server with :
+
+`
+rails s
+`
