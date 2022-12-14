@@ -7,11 +7,12 @@ First real team project, students of The Hacking Projet school.
 
 # Context
 
-La [Classic Racing School](https://www.classicracinggroup.com/) est une école de pilotage hors du temps et propose des stages de pilotage dans des monoplaces des années 60.
 
-Jusqu'à aujourd'hui la Classic Racing School faisait gérer son site internet wordpress par une agence web. Aujourd'hui, la stack montre quelques signes d'obsolécence vis à vis du besoin. De plus, l'agence n'a pas les capacités de prendre en main les besoins custom de la Classic Racing School.
+The Classic Racing School](https://www.classicracinggroup.com is a driving school out of time and offers driving courses in single-seaters of the 60s.
 
-C'est ici que nous intervenons en proposant une app en plus du site existant.
+Until today the Classic Racing School had its wordpress website managed by a web agency. Today, the stack shows some signs of obsolescence with respect to the need. Moreover, the agency does not have the capacity to handle the custom needs of the Classic Racing School.
+
+This is where we come in by proposing an app in addition to the existing site.
 
 
 
