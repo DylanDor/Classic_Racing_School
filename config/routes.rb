@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   resources :cart_items
   
   devise_for :users
-  resources :users, :only =>[:show, :edit, :destroy]
+  resources :users, :only =>[:show, :edit, :update, :destroy]
 
   resources :orders
   resources :options
