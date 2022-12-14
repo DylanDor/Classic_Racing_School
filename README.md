@@ -54,6 +54,11 @@ Fork or Download ZIP, then use this command for installing framework & gem :
 
 `rails assets:precompile`
 
+`rails db:create`
+
+`rails db:migrate`
+
+`rails db:seed`
 
 Then launch server with :
 
