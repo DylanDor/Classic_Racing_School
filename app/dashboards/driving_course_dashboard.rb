@@ -21,6 +21,7 @@ class DrivingCourseDashboard < Administrate::BaseDashboard
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
     img_url: Field::String,
+    product_type: Field::Select.with_options(searchable: false, collection: ->(field) { field.resource.class.send(field.attribute.to_s.pluralize).keys }),
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -36,6 +37,7 @@ class DrivingCourseDashboard < Administrate::BaseDashboard
     price
     carts
     orders
+    product_type
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -52,6 +54,7 @@ class DrivingCourseDashboard < Administrate::BaseDashboard
     img_url
     carts
     orders
+    product_type
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -68,6 +71,7 @@ class DrivingCourseDashboard < Administrate::BaseDashboard
     quantity
     price
     img_url
+    product_type
   ].freeze
 
   # COLLECTION_FILTERS
