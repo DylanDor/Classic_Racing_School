@@ -31,7 +31,7 @@ This is where we come in by proposing an app in addition to the existing site.
  - [Stripe](https://stripe.com/)
  - [Google Drive](https://console.cloud.google.com/apis/library/drive.googleapis.com?pli=1&project=engaged-wonder-369614)
  - [Sendinblue](https://fr.sendinblue.com/)
- - [administrate](https://github.com/thoughtbot/administrate)
+ - [Administrate](https://github.com/thoughtbot/administrate)
 
 
 ## Authors
@@ -58,5 +58,5 @@ Fork or Download ZIP, then use this command for installing framework & gem :
 Then launch server with :
 
 `
-bin/dev
+rails s
 `
