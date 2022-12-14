@@ -15,32 +15,29 @@ Option.destroy_all
 ######################### DRIVING COURSE CREATION ######################
 
 DrivingCourse.create(
-    title: "
-    STAGE DE PILOTAGE  INNES IRELAND (DEMI-JOURNÉE)",
+    title: "STAGE DE PILOTAGE  INNES IRELAND (DEMI-JOURNÉE)",
     description: "Notre stage de pilotage d’introduction au pilotage en monoplace permet de bien profiter des 
     sensations procurées par ces « cigares à quatre roues » sur un circuit mythique. Adaptée à tous, ce stage 
-    de pilotage vous fera entrer dans l’univers du sport automobile historique, au circuit de Charade.
-    8h00 – 14h00 ou 12h00 – 18h00",
+    de pilotage vous fera entrer dans l’univers du sport automobile historique, au circuit de Charade.",
     date: '2023-04-15 08:00',
     quantity: 18,
     price: 990,
-    img_url: "stage-pilotage-monoplace1.jpg",
+    img_url: "driving_courses/innes_ireland.jpg",
 )
 
 DrivingCourse.create(
     title: "STAGE DE PILOTAGE JIM CLARK (JOURNÉE COMPLÈTE)",
     description: "S’adressant à ceux désirant prolonger l’expérience au-delà du stage de pilotage Innes Ireland, 
     pour tirer le meilleur de nos monoplaces et du circuit de Charade tout en se concentrant sur les techniques de
-    pilotage lors d’une journée complète. Notre best-seller !
-    8h00 – 18h00",
+    pilotage lors d’une journée complète. Notre best-seller !",
     date: '2023-04-15 08:00',
     quantity: 18,
     price: 1850,
-    img_url: "stage-pilotage-monoplace2.jpg",
+    img_url: "driving_courses/jim_clark.jpg",
 )
 
 DrivingCourse.create(
-    title: "Stage de Pilotage Chris Amon : Journée Coaching Avancé",
+    title: "STAGE DE PILOTAGE CHRIS AMON (JOURNÉE COACHING AVANCÉ)",
     description: "Notre stage de pilotage d’une journée le plus avancé. 
     Débriefings techniques à l’aide de vidéos GoPro embarquées, incluant données 
     AIM enregistrées ainsi que l’analyse des chronos en piste. Une expérience de 
@@ -48,7 +45,7 @@ DrivingCourse.create(
     date: '2023-05-12 08:00',
     quantity: 12,
     price: 2590,
-    img_url: "stage-pilotage-monoplace3.jpg",
+    img_url: "driving_courses/chris_amon.jpg",
 )
 
 
@@ -60,20 +57,19 @@ DrivingCourse.create(
     date: '2023-06-23 08:00',
     quantity: 12,
     price: 4290,
-    img_url: "stage-pilotage-monoplace4.jpg",
+    img_url: "driving_courses/jackie_stewart.jpg",
 )
 
 DrivingCourse.create(
-    title: "HISTORIC RACING EXPERIENCE (PILOTAGE PERFORMANCE : 2 JOURS )",
-    description: "Combinant les savoir-faire respectifs de Classic Racing School et HYRacing dans le monde 
-    du sport automobile classic, avec le cadre exceptionnel et ensoleillé du circuit d’Almeria en Espagne en 
-    saison hivernale, ce produit commun vous permettra de vivre un week-end inoubliable plongé dans l’âge d’or du sport automobile, 
-    de la monoplace ancienne jusqu’aux plus iconiques voitures du Mans.
-    Cette expérience inédite se déroulera les 8 & 9 Décembre prochains sur le circuit d’Almeria en Espagne, avec des places limitées à 8 personnes par jour.",
-    date: '2023-04-15 08:00',
-    quantity: 7,
-    price: 9300,
-    img_url: "stage-pilotage-monoplace1.jpg",
+    title: "ÉVÉNEMENT SPECIAL : AUTO HEROES DAYS (JOURNÉE COMPLÈTE)",
+    description: "Un événement unique Les 29 et 30 juillet 2023. Sur la base de notre expérience Jim Clark, vous passerez deux heures au volant. 
+    Le matin, vous vous familiariserez avec la monoplace à la reconnaissance du circuit. 
+    L’après-midi, vous mettrez en pratique les conseils de notre équipe d’instructeurs pilotes pour perfectionner votre technique.
+    Votre journée se terminera autour d’un apéritif, avec la remise du pack cadeau exclusif à cet événement.",
+    date: '2023-07-29 08:00',
+    quantity: 16,
+    price: 1990,
+    img_url: "driving_courses/special_event_auto_heroes_days.jpg",
 )
 
 
@@ -86,7 +82,7 @@ DrivingCourse.create(
     date: '2023-04-15 08:00',
     quantity: 7,
     price: 150,
-    img_url: "stage-pilotage-monoplace5.jpg",
+    img_url: "driving_courses/bapteme.jpg",
 )
 ############################## DISCOUNTS CREATION ##########################
 
@@ -111,19 +107,19 @@ Option.create(
     title: "Pack Assurance Journée",
     description: "Réduction de la franchise casse à 3 000€ au lieu de 8 000€.",
     price: 150,
-    img_url: "stage-pilotage-monoplace.jpg",
+    img_url: "options/pack_assurance.jpg",
 )
 
 Option.create(
     title: "Pack Accompagnant Journée Complète",
     description: "Accès à l’enceinte privée du circuit, libre accès au lounge en bord de piste , ambiance ( Films automobile d’époque diffusés sur un écran, magazines et musique 60’s), visite de la tour de contrôle avec vue sur l’ensemble des caméras auprès de la direction de piste, mise à disposition de berlines avec chauffeurs pour visiter les environs du circuit et admirer les monoplaces en piste (accès aux voies de sécurités, vues sur différents virages, commentaires des instructeurs en direct…), ensemble des repas compris, et open bar soft tout au long de la journée.",
     price: 70,
-    img_url: "stage-pilotage-monoplace.jpg",
+    img_url: "options/pack_accompagnant.jpg",
 )
 
 Option.create(
     title: "Pack Co-Pilote : Jour du Stage",
     description: "Accès à l’enceinte privée du circuit, libre accès au lounge en bord de piste , ambiance ( Films automobile d’époque diffusés sur un écran, magazines et musique 60’s), visite de la tour de contrôle avec vue sur l’ensemble des caméras auprès de la direction de piste, mise à disposition de berlines avec chauffeurs pour visiter les environs du circuit et admirer les monoplaces en piste (accès aux voies de sécurités, vues sur différents virages, commentaires des instructeurs en direct…), ensemble des repas compris, et open bar soft tout au long de la journée.",
     price: 180,
-    img_url: "stage-pilotage-monoplace.jpg",
+    img_url: "options/pack_copilote.jpg",
 )
