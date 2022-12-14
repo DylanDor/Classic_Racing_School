@@ -6,7 +6,7 @@
                   <div class="flex-1">
                   </div>
                   <div class="max-w-sm mx-auto px-4 py-8">
-                      <h1 class="text-3xl text-slate-800 font-bold mb-6">Reset your Password ✨</h1>
+                      <h1 class="text-3xl text-slate-800 font-bold mb-6">Réinitialisez votre Mot de Passe ✨</h1>
                       <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
                       <%= render "devise/shared/error_messages", resource: resource %>
                           <div class="space-y-4">
@@ -23,22 +23,21 @@
                       <div class="pt-5 mt-6 border-t border-slate-200">
                           <div class="text-sm">
                               <%- if controller_name != 'sessions' %>
-                                Have an account?
-                                <%= link_to "Log in", new_session_path(resource_name), class: "font-medium text-gold hover:text-gold" %>
+                                J'ai déjà un Compte : 
+                                <%= link_to "Connexion", new_session_path(resource_name), class: "font-medium text-gold hover:text-gold" %>
                               <% end %>
                               <br>
-                              Don’t you have an account?
+                                Je n'ai pas de Compte :
                               <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-                                  <%= link_to "Sign up", new_registration_path(resource_name), class: "font-medium text-gold hover:text-gold" %><br/>
+                                  <%= link_to "Inscription", new_registration_path(resource_name), class: "font-medium text-gold hover:text-gold" %><br/>
                               <% end %>
                           </div>
                       </div>
-                      
                   </div>
               </div>
           </div>
           <div class="hidden md:block absolute top-0 bottom-0 right-0 md:w-1/2" aria-hidden="true">
-              <%= image_tag "stage-pilotage-monoplace.jpg", class: "object-cover object-center w-full h-full", alt: "Authentication image", style: "width=760 height=1024"%>
+              <%= image_tag "registrations/reset_password.jpg", class: "object-cover object-center w-full h-full", alt: "Authentication image", style: "width=760 height=1024"%>
           </div>
       </div>
   </div>

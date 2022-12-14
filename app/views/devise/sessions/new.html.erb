@@ -6,7 +6,7 @@
                     <div class="flex-1">
                     </div>
                     <div class="max-w-sm mx-auto px-4 py-8">
-                        <h1 class="text-3xl text-slate-800 font-bold mb-6">Welcome back! ✨</h1>
+                        <h1 class="text-3xl text-slate-800 font-bold mb-6">Bienvenue ! ✨</h1>
                         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
                             <%= render "devise/shared/error_messages" , resource: resource %>
                                 <div class="space-y-4">
@@ -23,7 +23,7 @@
                                     <% if devise_mapping.rememberable? %>
                                         <div>
                                             <%= f.check_box :remember_me, class: "form-checkbox" %>
-                                                <%= f.label :remember_me, class: "text-sm font-medium" %>
+                                                <%= f.label :se_souvenir_de_moi, class: "text-sm font-medium" %>
                                         </div>
                                         <% end %>
                                 </div>
@@ -31,18 +31,18 @@
                                     <div class="mr-1">
                                         <%- if devise_mapping.recoverable? && controller_name !='passwords' &&
                                             controller_name !='registrations' %>
-                                            <%= link_to "Forgot your password?" , new_password_path(resource_name),
+                                            <%= link_to "Mot de passe oublié ?" , new_password_path(resource_name),
                                                 class: "text-sm underline hover:no-underline" %><br />
                                                 <% end %>
                                     </div>
-                                    <%= f.submit "Log in" , class: "btn bg-gold hover:bg-gold text-white ml-3" %>
+                                    <%= f.submit "Connexion" , class: "btn bg-gold hover:bg-gold text-white ml-3" %>
                                 </div>
                                 <% end %>
                                     <div class="pt-5 mt-6 border-t border-slate-200">
                                         <div class="text-sm">
-                                            Don’t you have an account?
                                             <%- if devise_mapping.registerable? && controller_name !='registrations' %>
-                                                <%= link_to "Sign up" , new_registration_path(resource_name),
+                                            Je n'ai pas de compte : 
+                                                <%= link_to "Créer un compte" , new_registration_path(resource_name),
                                                     class: "font-medium text-gold hover:text-gold" %><br />
                                             <% end %>
                                         </div>
@@ -52,7 +52,7 @@
                 </div>
             </div>
             <div class="hidden md:block absolute top-0 bottom-0 right-0 md:w-1/2" aria-hidden="true">
-                <%= image_tag "stage-pilotage-monoplace.jpg" , class: "object-cover object-center w-full h-full" ,
+                <%= image_tag "registrations/sign_in.jpg" , class: "object-cover object-center w-full h-full" ,
                     alt: "Authentication image" , style: "width=760 height=1024" %>
             </div>
         </div>

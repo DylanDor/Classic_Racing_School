@@ -39,7 +39,7 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to user_url(@user), notice: "User was successfully updated." }
+        format.html { redirect_to user_url(@user), notice: "Votre profile a bien été mis à jour." }
         format.json { render :show, status: :ok, location: @user }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -53,7 +53,7 @@ class UsersController < ApplicationController
     @user.destroy
 
     respond_to do |format|
-      format.html { redirect_to users_url, notice: "User was successfully destroyed." }
+      format.html { redirect_to root_path, notice: "User was successfully destroyed." }
       format.json { head :no_content }
     end
   end
@@ -66,6 +66,6 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.require(:user).permit(:show, :edit, :update, :destroy)
+      params.fetch(:user, {}).permit(:first_name, :last_name, :email, :phone, :height, :birthday, :newsletter, :weight, :clothing_size, :helmet_size, :shoe_size, :driving_experience, :driving_experience_specifics, :coaching_expectations, :food_restriction, :address, :medical_contraindication, :how_know_CRS, :people_who_recommended, :comments_to_organization, :photo_publication_consent, :instagram_nickname, :personal_data_consent, :password)
     end
 end

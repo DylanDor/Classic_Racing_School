@@ -1,9 +1,21 @@
 Rails.application.routes.draw do
+  namespace :admin do
+      resources :users
+      resources :carts
+      resources :cart_items
+      resources :driving_courses
+      #resources :options
+      resources :orders
+      resources :order_items
+      #resources :promos
+
+      root to: "users#index"
+    end
 
   resources :cart_items
   
   devise_for :users
-  resources :users, :only =>[:show, :edit, :destroy]
+  resources :users, :only =>[:show, :edit, :update, :destroy]
 
   resources :orders
   resources :options

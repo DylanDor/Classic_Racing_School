@@ -10,8 +10,8 @@
             <div class="grow">
                 <header class="mb-2">
                     <h3 class="text-lg text-gold font-semibold mb-1"><%= driving_course.title %></h3>
-                    <div class="text-sm"> <%= driving_course.description %></div>
-                    <div class="text-sm"> <%= driving_course.date %></div>
+                    <div class="text-sm"> <%= driving_course.description %></div><br>
+                    <div class="text-sm"> <%= driving_course.date.strftime("Le %d/%m/%Y à %H:%M") %></div>
                 </header>
             </div>
             <!-- footer card -->
