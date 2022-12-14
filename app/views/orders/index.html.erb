@@ -22,10 +22,7 @@
                                         <div class="font-semibold text-left">Date de paiement</div>
                                     </th>
                                     <th class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap">
-                                        <div class="font-semibold text-left">Status</div>
-                                    </th>
-                                    <th class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap">
-                                        <div class="font-semibold text-right">Total du prix</div>
+                                        <div class="font-semibold text-right">Prix Total</div>
                                     </th>
                                 </tr>
                             </thead>
@@ -46,20 +43,8 @@
                                                 <%= order.created_at.strftime("%d/%m/%Y à %H:%M") %>
                                             </div>
                                         </td>
-                                        <td class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap">
-                                            <div class="text-left">
-                                                <!--  if order.cart.status == "Confirmed"  -->
-                                                <div
-                                                    class="text-xs inline-flex font-medium bg-emerald-100 text-emerald-600 rounded-full text-center px-2.5 py-1">
-                                                    Completed ?</div>
-                                                <!--  else  -->
-                                                <!-- <div class="text-xs inline-flex font-medium bg-slate-100 text-slate-500 rounded-full text-center px-2.5 py-1">En cours</div> -->
-                                                <!--  end  -->
-                                            </div>
-                                        </td>
                                         <td class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap w-px">
-                                            <div class="text-right text-slate-700 font-medium">Total Price ?
-                                            </div>
+                                            <div class="text-right text-slate-700 font-medium"><%= order.total_price %> €</div>
                                         </td>
                                     </tr>
                                     <% end %>

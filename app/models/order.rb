@@ -8,6 +8,14 @@ class Order < ApplicationRecord
     #has_many :options, through: :order_items
     #belongs_to :payment_detail
 
+    def total_price
+        total = 0
+        self.order_items.each do |order_item|
+          total += order_item.driving_course.price
+        end
+        return total
+    end
+
     private
 
     def fill_order
@@ -18,14 +26,6 @@ class Order < ApplicationRecord
 
     def empty_cart
         self.user.cart.cart_items.destroy_all
-    end
-
-    def total_price
-        total = 0
-        self.order_items.each do |order_item|
-          total += order_item.driving_course.price
-        end
-        return total
     end
     
     def google_credentials
