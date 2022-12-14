@@ -10,7 +10,6 @@
 
 DrivingCourse.destroy_all
 Promo.destroy_all
-Option.destroy_all
 
 ######################### DRIVING COURSE CREATION ######################
 
@@ -23,6 +22,7 @@ DrivingCourse.create(
     quantity: 18,
     price: 990,
     img_url: "driving_courses/innes_ireland.jpg",
+    product_type: 0,
 )
 
 DrivingCourse.create(
@@ -34,6 +34,7 @@ DrivingCourse.create(
     quantity: 18,
     price: 1850,
     img_url: "driving_courses/jim_clark.jpg",
+    product_type: 0,
 )
 
 DrivingCourse.create(
@@ -46,6 +47,7 @@ DrivingCourse.create(
     quantity: 12,
     price: 2590,
     img_url: "driving_courses/chris_amon.jpg",
+    product_type: 0,
 )
 
 
@@ -58,6 +60,7 @@ DrivingCourse.create(
     quantity: 12,
     price: 4290,
     img_url: "driving_courses/jackie_stewart.jpg",
+    product_type: 0,
 )
 
 DrivingCourse.create(
@@ -70,19 +73,45 @@ DrivingCourse.create(
     quantity: 16,
     price: 1990,
     img_url: "driving_courses/special_event_auto_heroes_days.jpg",
+    product_type: 0,
 )
 
 
 DrivingCourse.create(
-    title: "BAPTÊME PASSAGER - CIRCUIT DE CHARADE :SPORT-PROTOTYPE",
+    title: "BAPTÊME PASSAGER - CIRCUIT DE CHARADE :SPORT-PROTO",
     description: "Probablement la meilleure façon de découvrir le circuit de Charade en 
     passager avec la seule expérience de baptême historique en son genre. Entrez dans son histoire 
     en découvrant ce tracé mythique aux côtés d’un pilote professionnel qui saura exploiter tout le potentiel 
-    d’un véritable sport-prototype de 1966 : une Crosslé 9S de 240 ch. Disponible en bon cadeau, offrez cette expérience aujourd’hui.",
+    d’un véritable sport-protoproduct_type de 1966 : une Crosslé 9S de 240 ch. Disponible en bon cadeau, offrez cette expérience aujourd’hui.",
     date: '2023-04-15 08:00',
     quantity: 7,
     price: 150,
     img_url: "driving_courses/bapteme.jpg",
+    product_type: 0,
+)
+
+DrivingCourse.create(
+    title: "Pack Assurance Journée",
+    description: "Réduction de la franchise casse à 3 000€ au lieu de 8 000€.",
+    price: 150,
+    img_url: "options/pack_assurance.jpg",
+    product_type: 1,
+)
+
+DrivingCourse.create(
+    title: "Pack Accompagnant Journée Complète",
+    description: "Accès à l’enceinte privée du circuit, libre accès au lounge en bord de piste , ambiance ( Films automobile d’époque diffusés sur un écran, magazines et musique 60’s), visite de la tour de contrôle avec vue sur l’ensemble des caméras auprès de la direction de piste, mise à disposition de berlines avec chauffeurs pour visiter les environs du circuit et admirer les monoplaces en piste (accès aux voies de sécurités, vues sur différents virages, commentaires des instructeurs en direct…), ensemble des repas compris, et open bar soft tout au long de la journée.",
+    price: 70,
+    img_url: "options/pack_accompagnant.jpg",
+    product_type: 1,
+)
+
+DrivingCourse.create(
+    title: "Pack Co-Pilote : Jour du Stage",
+    description: "Accès à l’enceinte privée du circuit, libre accès au lounge en bord de piste , ambiance ( Films automobile d’époque diffusés sur un écran, magazines et musique 60’s), visite de la tour de contrôle avec vue sur l’ensemble des caméras auprès de la direction de piste, mise à disposition de berlines avec chauffeurs pour visiter les environs du circuit et admirer les monoplaces en piste (accès aux voies de sécurités, vues sur différents virages, commentaires des instructeurs en direct…), ensemble des repas compris, et open bar soft tout au long de la journée.",
+    price: 180,
+    img_url: "options/pack_copilote.jpg",
+    product_type: 1,
 )
 ############################## DISCOUNTS CREATION ##########################
 
@@ -99,27 +128,4 @@ Promo.create(
 Promo.create(
     name: "THP-SECRET-PROMO",
     discount: 0.1,
-)
-
-############################## OPTIONS CREATION ###########################
-
-Option.create(
-    title: "Pack Assurance Journée",
-    description: "Réduction de la franchise casse à 3 000€ au lieu de 8 000€.",
-    price: 150,
-    img_url: "options/pack_assurance.jpg",
-)
-
-Option.create(
-    title: "Pack Accompagnant Journée Complète",
-    description: "Accès à l’enceinte privée du circuit, libre accès au lounge en bord de piste , ambiance ( Films automobile d’époque diffusés sur un écran, magazines et musique 60’s), visite de la tour de contrôle avec vue sur l’ensemble des caméras auprès de la direction de piste, mise à disposition de berlines avec chauffeurs pour visiter les environs du circuit et admirer les monoplaces en piste (accès aux voies de sécurités, vues sur différents virages, commentaires des instructeurs en direct…), ensemble des repas compris, et open bar soft tout au long de la journée.",
-    price: 70,
-    img_url: "options/pack_accompagnant.jpg",
-)
-
-Option.create(
-    title: "Pack Co-Pilote : Jour du Stage",
-    description: "Accès à l’enceinte privée du circuit, libre accès au lounge en bord de piste , ambiance ( Films automobile d’époque diffusés sur un écran, magazines et musique 60’s), visite de la tour de contrôle avec vue sur l’ensemble des caméras auprès de la direction de piste, mise à disposition de berlines avec chauffeurs pour visiter les environs du circuit et admirer les monoplaces en piste (accès aux voies de sécurités, vues sur différents virages, commentaires des instructeurs en direct…), ensemble des repas compris, et open bar soft tout au long de la journée.",
-    price: 180,
-    img_url: "options/pack_copilote.jpg",
 )
