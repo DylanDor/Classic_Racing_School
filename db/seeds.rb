@@ -15,14 +15,11 @@ Option.destroy_all
 ######################### DRIVING COURSE CREATION ######################
 
 DrivingCourse.create(
-    title: "Stage de Pilotage Innes Ireland : Demi-Journée",
-    description: "Ce stage de pilotage tire son nom du pilote ayant remporté la première course de l’histoire du circuit de Charade en 1958 : Innes Ireland.
-    Le stage Innes Ireland est un stage découverte adapté à tous, vous invitant à entrer dans l’univers du sport automobile historique avec 60 minutes passées au volant des monoplaces lors de 3 sessions sur un tracé mythique, faisant partie du patrimoine des circuits mondiaux. 
-    
-    L’encadrement est adapté au niveau de chacun, avec des débriefings personnalisés entre chaque session de roulage en piste suite aux notes prises par notre corps d’instructeurs. Un accompagnement premium agrémenté d’une ambiance vintage très familiale.
-    
-    Jusqu’à 18 pilotes par séance.
-    
+    title: "
+    STAGE DE PILOTAGE  INNES IRELAND (DEMI-JOURNÉE)",
+    description: "Notre stage de pilotage d’introduction au pilotage en monoplace permet de bien profiter des 
+    sensations procurées par ces « cigares à quatre roues » sur un circuit mythique. Adaptée à tous, ce stage 
+    de pilotage vous fera entrer dans l’univers du sport automobile historique, au circuit de Charade.
     8h00 – 14h00 ou 12h00 – 18h00",
     date: '2023-04-15 08:00',
     quantity: 18,
@@ -31,14 +28,10 @@ DrivingCourse.create(
 )
 
 DrivingCourse.create(
-    title: "Stage de Pilotage Jim Clark : Journée Complète",
-    description: "Ce stage de pilotage est un hommage au pilote le plus populaire des années 60, qui a remporté la première course de Formule 1 du Grand Prix de France à Charade en 1965 sur Lotus : Jim Clark.
-    Un stage très complet, totalisant 2 heures en piste, au cours duquel vous pourrez dans un premier temps découvrir certaines techniques de pilotage le matin avant de les approfondir sur l’après-midi. L’objectif est de vous amener à prendre un maximum de plaisir au volant de nos monoplaces sur ce tracé mythique.
-    
-    L’encadrement est adapté au niveau de chacun, avec des débriefings personnalisés entre chaque session de roulage en piste suite aux notes prises par notre corps d’instructeurs. Un accompagnement premium agrémenté d’une ambiance vintage très familiale.
-
-    Jusqu’à 18 pilotes par séance.
-    
+    title: "STAGE DE PILOTAGE JIM CLARK (JOURNÉE COMPLÈTE)",
+    description: "S’adressant à ceux désirant prolonger l’expérience au-delà du stage de pilotage Innes Ireland, 
+    pour tirer le meilleur de nos monoplaces et du circuit de Charade tout en se concentrant sur les techniques de
+    pilotage lors d’une journée complète. Notre best-seller !
     8h00 – 18h00",
     date: '2023-04-15 08:00',
     quantity: 18,
@@ -48,29 +41,22 @@ DrivingCourse.create(
 
 DrivingCourse.create(
     title: "Stage de Pilotage Chris Amon : Journée Coaching Avancé",
-    description: "En 1972, Chris Amon établit le record ultime du tour à Charade lors du dernier GP de France F1 s’étant déroulé sur cette piste. Son temps ne sera jamais égalé. Ce programme spécial en son nom propose l’expérience la plus poussée que nous pouvons vous offrir sur une journée complète, avec le choix entre le Circuit de Charade et le Circuit de Nogaro.
-    Avec 3 heures en piste au Circuit de Charade (ou 2h30 au Circuit de Nogaro) vous serez amenés à progressez grâce à des outils et une pédagogie spécialement dédiés à ce stage de pilotage. Bénéficiant d’un coach par binôme, vous aurez l’opportunité de progresser d’une session à une autre grâce à l’analyse de vos vidéos et chronos embarqués, tout en travaillant certaines techniques propres au pilotage d’une monoplace de course historique.
-    
-    Un accompagnement premium 100% personnalisé, agrémenté d’une ambiance vintage très familiale.
-    
-    Jusqu’à 12 pilotes par séance.
-    
-    Programme : 8h00 – 18h00",
+    description: "Notre stage de pilotage d’une journée le plus avancé. 
+    Débriefings techniques à l’aide de vidéos GoPro embarquées, incluant données 
+    AIM enregistrées ainsi que l’analyse des chronos en piste. Une expérience de 
+    pilotage 100% plaisir au volant de nos monoplaces, au circuit de Charade.",
     date: '2023-05-12 08:00',
     quantity: 12,
     price: 2590,
     img_url: "stage-pilotage-monoplace3.jpg",
 )
 
+
 DrivingCourse.create(
-    title: "Stage de Pilotage Jackie Stewart : Coaching Avancé 2-jours",
-    description: "Stage de pilotage résultant de la combinaison des nos programmes Chris Amon et Jim Clark sur 2 jours.
-    Avec plus de 5 heures de roulage en piste, vous vivrez non seulement une des meilleures expériences de pilotage en monoplace historique au volant de nos Crosslé 90F, mais c’est avant tout votre technique de pilotage que vous pourrez approfondir grâce à notre encadrement personnalisé associé à notre expérience en tant qu’écurie de compétition, que vous intégrerez comme pilote durant l’équivalent d’un week-end complet. La première journée de vendredi vous permettra d’évoluer en comité réduit.
-    
-    Avec un coach professionnel par binôme de pilote, vous bénéficierez d’un debrief précis entre chaque session, de l’analyse de vos vidéos embarquées et de vos chronos en piste, le tout dans le but d’améliorer votre performance. La seconde journée du samedi vous permettra de mettre en application les acquis de la veille, sur un format de roulage plus libre avec 6 sessions supplémentaires, partagées avec d’autres pilotes du stage Jim Clark.
-    
-    Limité à 12 pilotes sur le vendredi et 18 sur le samedi (pilotes du stage Jim Clark inclus).
-    Jour 1: 08h00 – 19h00 & Jour 2: 08h00 – 18h00",
+    title: "STAGE DE PILOTAGE JACKIE STEWART (PILOTAGE PERFORMANCE : 2 JOURS )",
+    description: "Stage de pilotage résultant de la combinaison des programmes Chris Amon et Jim Clark sur 2 jours. 
+    Avec plus de 5 heures de pilotage en monoplace sur le circuit de Charade  sur deux jours, vous pourrez approfondir 
+    vos techniques de pilotage grâce à notre expérience en tant qu’écurie de compétition. Notre stage de pilotage en monoplace le plus complet.",
     date: '2023-06-23 08:00',
     quantity: 12,
     price: 4290,
@@ -78,18 +64,30 @@ DrivingCourse.create(
 )
 
 DrivingCourse.create(
-    title: "Expérience Baptême sport-prototype",
-    description: "Probablement la meilleure façon de découvrir le circuit de Charade en passager avec la seule expérience de baptême historique en son genre. Entrez dans son histoire en découvrant ce tracé mythique aux côtés d’un pilote professionnel qui saura exploiter tout le potentiel d’un véritable sport-prototype de 1966 : une Crosslé 9S. Produite à 73 exemplaires seulement, le châssis proposé est le dernier sorti d’usine.
+    title: "HISTORIC RACING EXPERIENCE (PILOTAGE PERFORMANCE : 2 JOURS )",
+    description: "Combinant les savoir-faire respectifs de Classic Racing School et HYRacing dans le monde 
+    du sport automobile classic, avec le cadre exceptionnel et ensoleillé du circuit d’Almeria en Espagne en 
+    saison hivernale, ce produit commun vous permettra de vivre un week-end inoubliable plongé dans l’âge d’or du sport automobile, 
+    de la monoplace ancienne jusqu’aux plus iconiques voitures du Mans.
+    Cette expérience inédite se déroulera les 8 & 9 Décembre prochains sur le circuit d’Almeria en Espagne, avec des places limitées à 8 personnes par jour.",
+    date: '2023-04-15 08:00',
+    quantity: 7,
+    price: 9300,
+    img_url: "stage-pilotage-monoplace1.jpg",
+)
 
-    Entrez dans son histoire en découvrant ce tracé mythique aux côtés d’un pilote professionnel qui saura exploiter tout le potentiel d’un véritable sport-prototype de 1966 : la Crosslé 9S, une vraie voiture de course historique avec 240 chevaux et 550 kgs !
-    
-    Cette 'expérience en voiture de course est le cadeau parfait pour un passionné de sensations fortes, réservez maintenant comme bon cadeau, valable pendant 12 mois !",
+
+DrivingCourse.create(
+    title: "BAPTÊME PASSAGER - CIRCUIT DE CHARADE :SPORT-PROTOTYPE",
+    description: "Probablement la meilleure façon de découvrir le circuit de Charade en 
+    passager avec la seule expérience de baptême historique en son genre. Entrez dans son histoire 
+    en découvrant ce tracé mythique aux côtés d’un pilote professionnel qui saura exploiter tout le potentiel 
+    d’un véritable sport-prototype de 1966 : une Crosslé 9S de 240 ch. Disponible en bon cadeau, offrez cette expérience aujourd’hui.",
     date: '2023-04-15 08:00',
     quantity: 7,
     price: 150,
     img_url: "stage-pilotage-monoplace5.jpg",
 )
-
 ############################## DISCOUNTS CREATION ##########################
 
 Promo.create(
