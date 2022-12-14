@@ -22,11 +22,19 @@ class CartItemsController < ApplicationController
   # POST /cart_items or /cart_items.json
   def create
     @cart_item = CartItem.new(cart_id: current_user.cart.id, driving_course_id: params[:id])
+    if @cart_item.driving_course.option?
       if @cart_item.save
         redirect_to cart_path(current_user.cart.id)
       else
         redirect_to :root
       end
+    elsif @cart_item.driving_course.main?
+      if @cart_item.save
+        redirect_to options_path
+      else
+        redirect_to :root
+      end
+    end
   end
 
   # PATCH/PUT /cart_items/1 or /cart_items/1.json
