@@ -8,7 +8,7 @@ First real team project, students of The Hacking Projet school.
 # Context
 
 
-The Classic Racing School](https://www.classicracinggroup.com is a driving school out of time and offers driving courses in single-seaters of the 60s.
+The [Classic Racing School](https://www.classicracinggroup.com) is a driving school out of time and offers driving courses in single-seaters of the 60s.
 
 Until today the Classic Racing School had its wordpress website managed by a web agency. Today, the stack shows some signs of obsolescence with respect to the need. Moreover, the agency does not have the capacity to handle the custom needs of the Classic Racing School.
 
