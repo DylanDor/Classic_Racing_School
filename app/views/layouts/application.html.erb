@@ -51,7 +51,7 @@
                             <% if current_user.admin == true %>
                               <li><%= link_to "Gestion Admin", admin_users_path, class: "font-medium text-sm text-neutral-900 hover:text-gold flex items-center py-1 px-3" %></li>
                             <% end %>
-                            <li><%= link_to "Mon Compte", user_path(current_user.id), class: "font-medium text-sm text-neutral-900 hover:text-gold flex items-center py-1 px-3" %></li>
+                            <li><%= link_to "Mon profil", user_path(current_user.id), class: "font-medium text-sm text-neutral-900 hover:text-gold flex items-center py-1 px-3" %></li>
                             <li><%= link_to "Mes Commandes", orders_path, class: "font-medium text-sm text-neutral-900 hover:text-gold flex items-center py-1 px-3" %></li>
                           </ul>
                           <ul>
