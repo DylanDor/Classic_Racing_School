@@ -3,7 +3,7 @@ class DrivingCoursesController < ApplicationController
 
   # GET /driving_courses or /driving_courses.json
   def index
-    @driving_courses = DrivingCourse.where(product_type: 0)
+    @driving_courses = DrivingCourse.all
   end
 
   # GET /driving_courses/1 or /driving_courses/1.json
@@ -26,7 +26,7 @@ class DrivingCoursesController < ApplicationController
 
     respond_to do |format|
       if @driving_course.save
-        format.html { redirect_to driving_course_url(@driving_course), notice: "Driving course was successfully created." }
+        format.html { redirect_to driving_course_url(@driving_course), notice: "Fiche créée." }
         format.json { render :show, status: :created, location: @driving_course }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -39,7 +39,7 @@ class DrivingCoursesController < ApplicationController
   def update
     respond_to do |format|
       if @driving_course.update(driving_course_params)
-        format.html { redirect_to driving_course_url(@driving_course), notice: "Driving course was successfully updated." }
+        format.html { redirect_to driving_course_url(@driving_course), notice: "Mise à jour de la fiche réussie." }
         format.json { render :show, status: :ok, location: @driving_course }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -53,7 +53,7 @@ class DrivingCoursesController < ApplicationController
     @driving_course.destroy
 
     respond_to do |format|
-      format.html { redirect_to driving_courses_url, notice: "Driving course was successfully destroyed." }
+      format.html { redirect_to driving_courses_url, notice: "Fiche détruite." }
       format.json { head :no_content }
     end
   end
