@@ -5,16 +5,32 @@
     <div class="p-6 space-y-6">
       <h2 class="text-2xl text-slate-800 font-bold mb-5">Les données de votre profil
       </h2>
-      <div class="text-sm">Vous vous apprêtez à faire partie du club des pilotes de la Classic Racing School. Ce formulaire vous permettra de nous communiquer des informations importantes pour vous accueillir dans les meilleures conditions. 
+      <div class="text-sm">Vous vous apprêtez à faire partie du club des pilotes de la Classic Racing School. Ce
+        formulaire vous permettra de nous communiquer des informations importantes pour vous accueillir dans les
+        meilleures conditions.
       </div>
-      <div class="text-sm">RGPD : Nous recueillons ces informations dans le but de vous fournir le meilleur service client possible et afin de pouvoir vous contacter facilement.
+      <div class="text-sm">RGPD : Nous recueillons ces informations dans le but de vous fournir le meilleur service
+        client possible et afin de pouvoir vous contacter facilement.
       </div>
       <hr>
 
       <!-- Business Profile -->
       <section>
-
+        <br>
         <h3 class="text-xl leading-snug text-slate-800 font-bold mb-1">Vos informations </h3>
+        <div class="sm:flex sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-5">
+          <div class="sm:w-1/3">
+            <%= f.label :Nom, class: "block text-sm font-medium mb-1" %>
+              <%= f.text_field :last_name, {class: "form-input w-full" } %>
+          </div>
+          <div class="sm:w-1/3">
+            <%= f.label :Prénom, class: "block text-sm font-medium mb-1" %>
+              <%= f.text_field :first_name, {class: "form-input w-full" } %>
+          </div>
+        </div>
+      </section>
+
+      <section>
         <div class="sm:flex sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-5">
 
           <div class="sm:w-1/3">
@@ -27,15 +43,14 @@
           </div>
         </div>
         <div class="sm:flex sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-5">
-
           <div class="sm:w-1/3">
             <%= f.label :Téléphone, class: "block text-sm font-medium mb-1" %>
               <%= f.text_field :phone, class: "form-input w-full" %>
           </div>
         </div>
       </section>
-      <section>
 
+      <section>
         <h3 class="text-xl leading-snug text-slate-800 font-bold mb-1">Votre gabarit </h3>
         <div class="text-sm">L'ensemble des informations ci-dessous nous serons nécessaires pour vous accueillir avec
           une tenue complète adaptée à votre gabarit.</div>
@@ -52,11 +67,10 @@
           </div>
         </div>
         <div class="sm:flex sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-5">
-
           <div class="sm:w-1/3">
             <%= f.label :Taille_du_casque, class: "block text-sm font-medium mb-1" %>
-              <%= f.select :helmet_size, ["S", "M", "L", "XL"], {include_blank: "Selectionner une taille"}, {class: "form-select w-full"} %>
-
+              <%= f.select :helmet_size, ["S", "M" , "L" , "XL" ], {include_blank: "Selectionner une taille" },
+                {class: "form-select w-full" } %>
           </div>
           <div class="sm:w-1/3">
             <%= f.label :Poiture, class: "block text-sm font-medium mb-1" %>
@@ -64,41 +78,36 @@
           </div>
         </div>
         <div class="sm:flex sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-5">
-
           <div class="sm:w-1/3">
             <%= f.label :Taille_de_votre_tenue, class: "block text-sm font-medium mb-1" %>
-              <%= f.select :clothing_size, ["XS", "S", "M", "L", "XL", "XXL"], {include_blank: "Selectionner une taille"}, {class: "form-select w-full"} %>
-
+              <%= f.select :clothing_size, ["XS", "S" , "M" , "L" , "XL" , "XXL" ],
+                {include_blank: "Selectionner une taille" }, {class: "form-select w-full" } %>
           </div>
-      
         </div>
       </section>
-      <section>
 
+      <section>
         <h3 class="text-xl leading-snug text-slate-800 font-bold mb-1">Votre expérience </h3>
         <div class="sm:flex sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-5">
-
           <div class="sm:w-1/3">
             <%= f.label :Exprience_de_conduite, class: "block text-sm font-medium mb-1" %>
-              <%= f.select :driving_experience, ["Novice / beginner", "Amateur / Enthusiast", "Avancé / Advanced", "Licence pilote / Racing licence", "Autre"], {include_blank: "Selectionner un niveau"}, {class: "form-select w-full"} %>
-
+              <%= f.select :driving_experience, ["Novice / beginner", "Amateur / Enthusiast" , "Avancé / Advanced", "Licence pilote / Racing licence" , "Autre" ], {include_blank: "Selectionner un niveau" },
+                {class: "form-select w-full" } %>
           </div>
         </div>
         <div class="sm:flex sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-5">
-
           <div class="sm:w-1/3">
             <%= f.label :Détail_de_l_expérience, class: "block text-sm font-medium mb-1" %>
-              <%= f.text_area :driving_experience_specifics, class: "form-input w-full", rows: "8" %>
+              <%= f.text_area :driving_experience_specifics, class: "form-input w-full" , rows: "8" %>
           </div>
           <div class="sm:w-1/3">
             <%= f.label :Attentes_vis_à_vis_du_coaching, class: "block text-sm font-medium mb-1" %>
-              <%= f.text_area :coaching_expectations, class: "form-input w-full", rows: "8" %>
-
+              <%= f.text_area :coaching_expectations, class: "form-input w-full" , rows: "8" %>
           </div>
         </div>
       </section>
-      <section>
 
+      <section>
         <h3 class="text-xl leading-snug text-slate-800 font-bold mb-1">Autres informations </h3>
         <div class="sm:flex sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-5">
           <div class="sm:w-1/3">
@@ -131,18 +140,14 @@
           </div>
         </div>
         <div class="sm:flex sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-5">
-
-            <%= f.check_box :photo_publication_consent, class: "form-checkbox" %>
+          <%= f.check_box :photo_publication_consent, class: "form-checkbox" %>
             <%= f.label :Autorisation_d_usage_de_vos_photos, class: "text-sm ml-2" %>
 
+              <%= f.check_box :personal_data_consent, class: "form-checkbox" %>
+                <%= f.label :Autorisation_de_stockage_de_données, class: "text-sm ml-2" %>
 
-            <%= f.check_box :personal_data_consent, class: "form-checkbox" %>
-            <%= f.label :Autorisation_de_stockage_de_données, class: "text-sm ml-2" %>
-
-
-            <%= f.check_box  :newsletter, class: "form-checkbox" %>
-            <%= f.label :Inscrivez_vous_à_notre_newsletter, class: "text-sm ml-2" %>
-
+                  <%= f.check_box :newsletter, class: "form-checkbox" %>
+                    <%= f.label :Inscrivez_vous_à_notre_newsletter, class: "text-sm ml-2" %>
         </div>
       </section>
     </div>
@@ -153,7 +158,6 @@
         <div class="flex self-end">
           <button class="btn border-slate-200 hover:border-slate-300 text-gold">Annuler</button>
           <%= f.submit 'Sauvegarder les changements' , class: "btn-sm w-full bg-gold hover:bg-gold text-white ml-3" %>
-
         </div>
       </div>
     </footer>
