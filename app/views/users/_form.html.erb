@@ -52,7 +52,7 @@
 
       <section>
         <h3 class="text-xl leading-snug text-slate-800 font-bold mb-1">Votre gabarit </h3>
-        <div class="text-sm">L'ensemble des informations ci-dessous nous serons nécessaires pour vous accueillir avec
+        <div class="text-sm">L'ensemble des informations ci-dessous nous seront nécessaires pour vous accueillir avec
           une tenue complète adaptée à votre gabarit.</div>
         <div class="sm:flex sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-5">
 
@@ -69,19 +69,19 @@
         <div class="sm:flex sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-5">
           <div class="sm:w-1/3">
             <%= f.label :Taille_du_casque, class: "block text-sm font-medium mb-1" %>
-              <%= f.select :helmet_size, ["S", "M" , "L" , "XL" ], {include_blank: "Selectionner une taille" },
-                {class: "form-select w-full" } %>
+              <%= f.select :helmet_size, ["S", "M" , "L" , "XL" ], {include_blank: "Selectionner une taille"},
+                {class: "form-select w-full"} %>
           </div>
           <div class="sm:w-1/3">
-            <%= f.label :Poiture, class: "block text-sm font-medium mb-1" %>
+            <%= f.label :Pointure, class: "block text-sm font-medium mb-1" %>
               <%= f.text_field :shoe_size, class: "form-input w-full" %>
           </div>
         </div>
         <div class="sm:flex sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-5">
           <div class="sm:w-1/3">
             <%= f.label :Taille_de_votre_tenue, class: "block text-sm font-medium mb-1" %>
-              <%= f.select :clothing_size, ["XS", "S" , "M" , "L" , "XL" , "XXL" ],
-                {include_blank: "Selectionner une taille" }, {class: "form-select w-full" } %>
+              <%= f.select :clothing_size, ["XS", "S" , "M" , "L" , "XL" , "XXL"],
+                {include_blank: "Selectionner une taille"}, {class: "form-select w-full"} %>
           </div>
         </div>
       </section>
@@ -90,19 +90,19 @@
         <h3 class="text-xl leading-snug text-slate-800 font-bold mb-1">Votre expérience </h3>
         <div class="sm:flex sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-5">
           <div class="sm:w-1/3">
-            <%= f.label :Exprience_de_conduite, class: "block text-sm font-medium mb-1" %>
-              <%= f.select :driving_experience, ["Novice / beginner", "Amateur / Enthusiast" , "Avancé / Advanced", "Licence pilote / Racing licence" , "Autre" ], {include_blank: "Selectionner un niveau" },
-                {class: "form-select w-full" } %>
+            <%= f.label :Expérience_de_conduite, class: "block text-sm font-medium mb-1" %>
+              <%= f.select :driving_experience, ["Novice / beginner", "Amateur / Enthusiast", "Avancé / Advanced", "Licence pilote / Racing licence", "Autre"],
+                {include_blank: "Selectionner un niveau"},{class: "form-select w-full"} %>
           </div>
         </div>
         <div class="sm:flex sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-5">
           <div class="sm:w-1/3">
-            <%= f.label :Détail_de_l_expérience, class: "block text-sm font-medium mb-1" %>
-              <%= f.text_area :driving_experience_specifics, class: "form-input w-full" , rows: "8" %>
+            <%= f.label :"Détails de l'expérience", class: "block text-sm font-medium mb-1" %>
+              <%= f.text_area :driving_experience_specifics, class: "form-input w-full", rows: "8" %>
           </div>
           <div class="sm:w-1/3">
             <%= f.label :Attentes_vis_à_vis_du_coaching, class: "block text-sm font-medium mb-1" %>
-              <%= f.text_area :coaching_expectations, class: "form-input w-full" , rows: "8" %>
+              <%= f.text_area :coaching_expectations, class: "form-input w-full", rows: "8" %>
           </div>
         </div>
       </section>
@@ -115,23 +115,23 @@
               <%= f.text_field :food_restriction, class: "form-input w-full" %>
           </div>
           <div class="sm:w-1/3">
-            <%= f.label :Contrindications_médicales, class: "block text-sm font-medium mb-1" %>
+            <%= f.label :"Contre-indications médicales", class: "block text-sm font-medium mb-1" %>
               <%= f.text_field :medical_contraindication, class: "form-input w-full" %>
           </div>
         </div>
         <div class="sm:flex sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-5">
           <div class="sm:w-1/3">
-            <%= f.label :Où_avez_vous_connu_la_Classic_Racing_School_?, class: "block text-sm font-medium mb-1" %>
+            <%= f.label :"Où avez-vous connu la Classic Racing School ?", class: "block text-sm font-medium mb-1" %>
               <%= f.text_field :how_know_CRS, class: "form-input w-full" %>
           </div>
           <div class="sm:w-1/3">
-            <%= f.label :Personne_qui_vous_a_recommandé_notre_école, class: "block text-sm font-medium mb-1" %>
+            <%= f.label :Personnes_qui_vous_ont_recommandé_notre_école, class: "block text-sm font-medium mb-1" %>
               <%= f.text_field :people_who_recommended, class: "form-input w-full" %>
           </div>
         </div>
         <div class="sm:flex sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-5">
           <div class="sm:w-1/3">
-            <%= f.label :Commentaire_pour_l_organisation, class: "block text-sm font-medium mb-1" %>
+            <%= f.label :"Commentaire pour l'organisation", class: "block text-sm font-medium mb-1" %>
               <%= f.text_field :comments_to_organization, class: "form-input w-full" %>
           </div>
           <div class="sm:w-1/3">
@@ -141,13 +141,13 @@
         </div>
         <div class="sm:flex sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-5">
           <%= f.check_box :photo_publication_consent, class: "form-checkbox" %>
-            <%= f.label :Autorisation_de_droit_à_l_image, class: "text-sm ml-2" %>
+            <%= f.label :"Autorisation_de_droit_à_l'image", class: "text-sm ml-2" %>
 
           <%= f.check_box :personal_data_consent, class: "form-checkbox" %>
             <%= f.label :Autorisation_de_stockage_de_données, class: "text-sm ml-2" %>
 
           <%= f.check_box :newsletter, class: "form-checkbox" %>
-            <%= f.label :Inscrivez_vous_à_notre_newsletter, class: "text-sm ml-2" %>
+            <%= f.label :"S'inscrire à notre Newsletter", class: "text-sm ml-2" %>
         </div>
       </section>
     </div>
@@ -157,7 +157,7 @@
       <div class="flex flex-col px-6 py-5 ">
         <div class="flex self-end">
           <button class="btn border-slate-200 hover:border-slate-300 text-gold">Annuler</button>
-          <%= f.submit 'Sauvegarder les changements' , class: "btn-sm w-full bg-gold hover:bg-gold text-white ml-3" %>
+          <%= f.submit 'Sauvegarder les changements', class: "btn-sm w-full bg-gold hover:bg-gold text-white ml-3" %>
         </div>
       </div>
     </footer>
