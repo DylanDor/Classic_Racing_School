@@ -17,8 +17,8 @@
                 <%= render "cart_items" %>
             </ul>
 
-            <div class="mt-6 text-center lg:text-left"> <
-                <%= link_to "Revenir à l'accueil", root_path, class: "text-sm font-medium text-gold hover:text-gold" %>
+            <div class="mt-6 text-center lg:text-left">
+                <%= link_to " < Revenir à l'accueil", root_path, class: "text-sm font-medium text-gold hover:text-gold" %>
             </div>
 
         </div>
@@ -36,14 +36,6 @@
                     </li>
                 </ul>
                 <!-- Promo box -->
-                <div class="mb-6">
-                    <div class="flex items-center justify-between">
-                        <label class="block text-sm font-medium mb-1" for="promo">Code Promo</label>
-                        <div class="text-sm text-slate-400 italic">optionel</div>
-                    </div>
-                    <input id="promo" class="form-input w-full mb-2" type="text">
-                    <button class="btn w-full bg-gold hover:bg-gold text-white disabled:border-slate-200 disabled:bg-slate-100 disabled:text-slate-400 disabled:cursor-not-allowed shadow-none" disabled="">Appliquer Code Promo</button>
-                </div>
                 <div class="mb-4">
                     <%= form_tag checkout_create_path, method: :post, data: { turbo: false } do %>
                     <input type="hidden" name="total" value="<%= @total_price %>" />
