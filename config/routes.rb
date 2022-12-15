@@ -4,7 +4,6 @@ Rails.application.routes.draw do
       resources :carts
       resources :cart_items
       resources :driving_courses
-      #resources :options
       resources :orders
       resources :order_items
       #resources :promos

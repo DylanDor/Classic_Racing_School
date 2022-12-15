@@ -3,7 +3,7 @@ class DrivingCoursesController < ApplicationController
 
   # GET /driving_courses or /driving_courses.json
   def index
-    @driving_courses = DrivingCourse.all
+    @driving_courses = DrivingCourse.where(product_type: 0)
   end
 
   # GET /driving_courses/1 or /driving_courses/1.json
