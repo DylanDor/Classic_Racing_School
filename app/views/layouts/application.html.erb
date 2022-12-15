@@ -13,7 +13,7 @@
 
 
   <body>
-    <div class="min-h-screen">
+    <div class="flex flex-col h-screen">
       <header class="sticky top-0 bg-neutral-900 z-30">
         <div class="px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between -mb-px">
@@ -42,16 +42,21 @@
                       </button>
                       <div class="origin-top-right z-10 absolute top-full right-0 min-w-44 bg-white border border-slate-200 py-1.5 rounded shadow-lg overflow-hidden mt-1" @mouseover="open = true" @keydown.escape.window="open = false" x-show="open" x-transition:enter="transition ease-out duration-200 transform" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-out duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" style="display: none;">
                           <div class="pt-0.5 pb-2 px-3 mb-1 border-b border-slate-200">
-                              <div class="font-medium text-slate-800"><%= link_to current_user.email, user_path(current_user.id), class: "font-medium text-sm text-gold hover:text-gold flex items-center py-1" %></div>
-                              <% if current_user.admin == true %>
-                                <div class="text-xs text-slate-500 italic">Administrateur</div>
-                              <% end %>
+                            <% if current_user.first_name.blank? %>
+                              <div class="font-medium text-slate-800"><%= current_user.email %></div>
+                            <% else %>
+                              <div class="font-medium text-slate-800"><%= current_user.last_name.capitalize %> <%= current_user.first_name.upcase %></div>
+                            <% end %>
+
+                            <% if current_user.admin == true %>
+                              <div class="text-xs text-slate-500 italic">Administrateur</div>
+                            <% end %>
                           </div>
                           <ul>
                             <% if current_user.admin == true %>
                               <li><%= link_to "Gestion Admin", admin_users_path, class: "font-medium text-sm text-neutral-900 hover:text-gold flex items-center py-1 px-3" %></li>
                             <% end %>
-                            <li><%= link_to "Mon Compte", user_path(current_user.id), class: "font-medium text-sm text-neutral-900 hover:text-gold flex items-center py-1 px-3" %></li>
+                            <li><%= link_to "Mon profil", user_path(current_user.id), class: "font-medium text-sm text-neutral-900 hover:text-gold flex items-center py-1 px-3" %></li>
                             <li><%= link_to "Mes Commandes", orders_path, class: "font-medium text-sm text-neutral-900 hover:text-gold flex items-center py-1 px-3" %></li>
                           </ul>
                           <ul>
@@ -74,7 +79,7 @@
 
 
 
-    <footer class="sticky top-[100vh] h-28 p-6 md:flex md:items-center md:justify-between md:p-6 bg-neutral-900">
+    <footer class="sticky top-[100vh] p-6 md:flex md:items-center md:justify-between md:p-6 bg-neutral-900">
       <span class="text-sm text-white sm:text-center">2022 © Classic Racing Group <br> <a href="https://www.classicracinggroup.com/wp-content/uploads/2020/06/CONDITIONS-GENERALES-DE-VENTE-2020.pdf" class="hover:underline">Conditions Générales de Vente</a></span><br>
       <span class="text-sm text-white sm:text-center"><a href="https://www.classicracinggroup.com/mentions-legales/" class="hover:underline">Mentions légales et politique de protection des données </a></span><br>
       <ul class="flex flex-wrap items-center mt-3 text-sm text-white sm:mt-0">

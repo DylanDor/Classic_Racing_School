@@ -41,7 +41,7 @@ class CartItemsController < ApplicationController
   def update
     respond_to do |format|
       if @cart_item.update(cart_item_params)
-        format.html { redirect_to cart_item_url(@cart_item), notice: "Cart item was successfully updated." }
+        format.html { redirect_to cart_item_url(@cart_item), notice: "Mise à jour réussie." }
         format.json { render :show, status: :ok, location: @cart_item }
       else
         format.html { render :edit, status: :unprocessable_entity }

@@ -6,7 +6,6 @@ Rails.application.routes.draw do
       resources :driving_courses
       resources :orders
       resources :order_items
-      #resources :promos
 
       root to: "users#index"
     end
