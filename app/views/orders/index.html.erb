@@ -42,7 +42,7 @@
                                             </div>
                                         </td>
                                         <td class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap w-px">
-                                            <div class="text-right text-slate-700 font-medium"><%= order.total_price %> €</div>
+                                            <div class="text-right text-slate-700 font-medium"><%= '%.2f' % order.total_price %> €</div>
                                         </td>
                                     </tr>
                                     <% end %>
@@ -50,6 +50,9 @@
                         </table>
                     </div>
                 </div>
+            </div>
+            <div class="mt-6 text-center lg:text-left">
+                 <%= link_to "< Revenir à l'accueil", root_path, class: "text-sm font-medium text-gold hover:text-gold" %>
             </div>
         </div>
     </div>        
