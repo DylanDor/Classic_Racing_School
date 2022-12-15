@@ -3,7 +3,7 @@ class UserMailer < ApplicationMailer
 
     def welcome_email(user)
       #on récupère l'instance user pour ensuite pouvoir la passer à la view en @user
-      @user = user 
+      @user = user
 
       #on définit une variable @url qu'on utilisera dans la view d’e-mail
       @url_signin  = 'https://classic-racing-school.fly.dev/users/sign_in' 
@@ -15,6 +15,7 @@ class UserMailer < ApplicationMailer
     def order_confirmation_user (order)
     #on récupère l'instance user pour ensuite pouvoir la passer à la view en @user
     @order = order 
+ 
 
     #on définit une variable @url qu'on utilisera dans la view d’e-mail
     @url_signin  = 'https://classic-racing-school.fly.dev/' 

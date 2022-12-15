@@ -843,8 +843,7 @@
                                                                                                         <p
                                                                                                             style="margin: 0; color: #677876; font-size: 18px;">
                                                                                                             <span
-                                                                                                                style="color: #ad8d59;"><strong>Nom
-                                                                                                                    prénom</strong></span>
+                                                                                                                style="color: #ad8d59;"><strong>Email de l'acheteur</strong></span>
                                                                                                         </p>
                                                                                                     </div>
                                                                                                 </td>
@@ -874,8 +873,7 @@
                                                                                                         <p
                                                                                                             style="margin: 0;">
                                                                                                             <span
-                                                                                                                style="color: #ffffff;">Lorem
-                                                                                                                ipsum</span>
+                                                                                                                style="color: #ffffff;"><%= @order.user.email %></span>
                                                                                                         </p>
                                                                                                     </div>
                                                                                                 </td>
@@ -964,11 +962,7 @@
                                                                                                         <p
                                                                                                             style="margin: 0;">
                                                                                                             <span
-                                                                                                                style="color: #ffffff;">Lorem
-                                                                                                                ipsum
-                                                                                                                dolor
-                                                                                                                sit
-                                                                                                                amet, </span>
+                                                                                                                style="color: #ffffff;">[nom du stage]                                                                                                             </span>
                                                                                                         </p>
                                                                                                     </div>
                                                                                                 </td>
@@ -1055,7 +1049,7 @@
                                                                                                         <p
                                                                                                             style="margin: 0;">
                                                                                                             <span
-                                                                                                                style="color: #ffffff;">xxx€</span>
+                                                                                                                style="color: #ffffff;"> <%= @order.total_price %>€</span>
                                                                                                         </p>
                                                                                                     </div>
                                                                                                 </td>
