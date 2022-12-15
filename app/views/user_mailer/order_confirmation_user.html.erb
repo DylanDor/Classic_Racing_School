@@ -775,7 +775,7 @@
                                                                                                             style="margin: 0;">
                                                                                                             <span
                                                                                                                 style="color: #ffffff;">Bonjour
-                                                                                                                [Prénom], </span>
+                                                                                                                <% @order.user.email %>, </span>
                                                                                                         </p>
                                                                                                         <p
                                                                                                             style="margin: 0;">
@@ -793,8 +793,7 @@
                                                                                                                 réservation
                                                                                                                 pour le
                                                                                                                 stage
-                                                                                                                [nom du
-                                                                                                                stage]
+                                                                                                                <% @order.user.email%>
                                                                                                                 prévu le
                                                                                                                 [date du
                                                                                                                 stage]. </span>
@@ -1005,8 +1004,7 @@
                                                                                                         <p
                                                                                                             style="margin: 0; color: #677876; font-size: 18px;">
                                                                                                             <span
-                                                                                                                style="color: #ad8d59;"><strong>Nom
-                                                                                                                    prénom</strong></span>
+                                                                                                                style="color: #ad8d59;"><strong>Email de l'acheteur</strong></span>
                                                                                                         </p>
                                                                                                     </div>
                                                                                                 </td>
@@ -1036,7 +1034,7 @@
                                                                                                         <p
                                                                                                             style="margin: 0;">
                                                                                                             <span
-                                                                                                                style="color: #ffffff;">[nom&amp;prenom]</span>
+                                                                                                                style="color: #ffffff;"><%= @order.user.email %> </span>
                                                                                                         </p>
                                                                                                     </div>
                                                                                                 </td>
@@ -1125,10 +1123,9 @@
                                                                                                         <p
                                                                                                             style="margin: 0;">
                                                                                                             <span
-                                                                                                                style="color: #ffffff;">[Intitulé
-                                                                                                                Du stage
-                                                                                                                +
-                                                                                                                Date] </span>
+                                                                                                                style="color: #ffffff;">[nom du stage]</span>
+
+                                                                                                                </span>
                                                                                                         </p>
                                                                                                     </div>
                                                                                                 </td>
@@ -1216,7 +1213,7 @@
                                                                                                             style="margin: 0;">
                                                                                                             <span
                                                                                                                 style="color: #ffffff;">Prix
-                                                                                                                €</span>
+                                                                                                               <%= @order.total_price %>€</span>
                                                                                                         </p>
                                                                                                     </div>
                                                                                                 </td>

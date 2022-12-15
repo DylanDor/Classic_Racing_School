@@ -20,7 +20,7 @@ class Order < ApplicationRecord
     private
 
     def order_send
-        #AdminMailer.order_send(self).deliver_now
+        AdminMailer.order_confirmation_admin(self).deliver_now
         UserMailer.order_confirmation_user(self).deliver_now
       end
 
