@@ -1,4 +1,4 @@
-<div class="px-4 sm:px-6 lg:px-8 py-8 w-full flex h-screen bg-neutral-900">
+<div class=" px-4 sm:px-6 lg:px-8 py-8 w-full flex">
 
     <!-- Page content -->
     <div class="max-w-5xl mx-auto flex flex-col lg:flex-row lg:space-x-8 xl:space-x-16">
@@ -8,7 +8,7 @@
           
             <header class="mb-2">
                 <!-- Title -->
-                <h1 class="text-2xl md:text-3xl text-white underline underline-offset-8 font-bold"> RÉSERVATION ✨</h1>
+                <h1 class="text-2xl md:text-3xl text-neutral-900 underline underline-offset-8 font-bold"> RÉSERVATION ✨</h1>
             </header>
             
             <ul>
@@ -36,7 +36,7 @@
                 <div class="mb-4">
                     <%= form_tag checkout_create_path, method: :post, data: { turbo: false } do %>
                     <input type="hidden" name="total" value="<%= @total_price %>" />
-                    <%= submit_tag "PASSER COMMANDE - #{'%.2f' % @total_price}  €", class: "btn w-full bg-gold hover:bg-gold text-white" %>
+                    <%= submit_tag "PASSER COMMANDE - #{'%.2f' % @total_price}  €", class: "cursor-pointer btn w-full bg-gold hover:bg-gold text-white" %>
                     <% end %>
                 </div>
                 <div class="text-xs text-slate-500 italic text-center">Racing School Group vous remercie de votre réservation <a class="underline hover:no-underline" href="#0">Terms</a>.</div>
