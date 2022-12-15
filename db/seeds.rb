@@ -1,17 +1,4 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
-
-############################ ALL INITIALIZATION ########################
-
 DrivingCourse.destroy_all
-Promo.destroy_all
-
-######################### DRIVING COURSE CREATION ######################
 
 DrivingCourse.create(
     title: "STAGE DE PILOTAGE  INNES IRELAND (DEMI-JOURNÉE)",
@@ -112,20 +99,4 @@ DrivingCourse.create(
     price: 180,
     img_url: "options/pack_copilote.jpg",
     product_type: 1,
-)
-############################## DISCOUNTS CREATION ##########################
-
-Promo.create(
-    name: "RACING10",
-    discount: 0.9,
-)
-
-Promo.create(
-    name: "RACING20",
-    discount: 0.8,
-)
-
-Promo.create(
-    name: "THP-SECRET-PROMO",
-    discount: 0.1,
 )
