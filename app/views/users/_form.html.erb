@@ -1,7 +1,7 @@
-<!-- Panel -->
+
 <div class="grow">
   <%= form_with(model: @user, url: user_path(@user), method: "put") do |f| %>
-    <!-- Panel body -->
+
     <div class="p-6 space-y-6">
       <h2 class="text-2xl text-slate-800 font-bold mb-5">Les données de votre profil</h2>
       <div class="text-sm">Vous vous apprêtez à faire partie du club des pilotes de la Classic Racing School. Ce
@@ -13,7 +13,6 @@
       </div>
       <hr>
 
-      <!-- Business Profile -->
     <section>
       <br>
       <h3 class="text-xl leading-snug text-slate-800 font-bold mb-1">Vos informations </h3>
@@ -142,16 +141,12 @@
         <%= f.check_box :photo_publication_consent, class: "form-checkbox" %>
           <%= f.label :"Autorisation_de_droit_à_l'image", class: "text-sm ml-2" %>
 
-        <%= f.check_box :personal_data_consent, class: "form-checkbox" %>
-          <%= f.label :Autorisation_de_stockage_de_données, class: "text-sm ml-2" %>
-
         <%= f.check_box :newsletter, class: "form-checkbox" %>
           <%= f.label :"S'inscrire à notre Newsletter", class: "text-sm ml-2" %>
         </div>
       </section>
     </div>
 
-    <!-- Panel footer -->
     <footer>
       <div class="flex flex-col px-6 py-5 ">
         <div class="flex self-end">
