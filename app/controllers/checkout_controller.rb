@@ -9,9 +9,7 @@ class CheckoutController < ApplicationController
           price_data: {
             unit_amount: (item.driving_course.price*100).to_i,
             currency: 'eur',
-            product_data: {
-              name: item.driving_course.title,
-            },
+            product_data: {name: item.driving_course.title}
           },
           quantity: 1,
         }
