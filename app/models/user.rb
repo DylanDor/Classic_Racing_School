@@ -12,7 +12,7 @@ class User < ApplicationRecord
 
   devise :database_authenticatable, :registerable,
   :recoverable, :rememberable, :validatable
-  has_one :cart
+  has_one :cart, dependent: :destroy
 
   validates :email, presence: true, uniqueness: true
   validates :first_name, allow_blank: true, length: {in: 3..100, message: "Votre Nom doit avoir une longueur comprise entre 3 and 100 caractères"}
