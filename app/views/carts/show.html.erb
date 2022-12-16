@@ -35,7 +35,7 @@
                 </ul>
                 <div class="mb-4">
                     <%= form_tag checkout_create_path, method: :post, data: { turbo: false } do %>
-                    <input type="hidden" name="total" value="<%= @total_price %>" />
+                    <input type="hidden" name="total" value="<%= @total_price %>" autocomplete="off" />
                     <%= submit_tag "PASSER COMMANDE - #{'%.2f' % @total_price}  €", class: "cursor-pointer btn w-full bg-gold hover:bg-gold text-white" %>
                     <% end %>
                 </div>
