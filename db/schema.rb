@@ -42,16 +42,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_15_162502) do
     t.integer "product_type", default: 0
   end
 
-  create_table "options", force: :cascade do |t|
-    t.string "title"
-    t.text "description"
-    t.integer "quantity"
-    t.float "price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "img_url"
-  end
-
   create_table "order_items", force: :cascade do |t|
     t.bigint "order_id"
     t.bigint "driving_course_id"
