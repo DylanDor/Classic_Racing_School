@@ -13,12 +13,13 @@ Rails.application.routes.draw do
   resources :cart_items
   
   devise_for :users
-  resources :users, :only =>[:show, :edit, :update, :destroy]
+  resources :users, :only =>[:show, :edit, :update, :destroy], path: 'mon_compte'
+
 
   resources :orders
   resources :options
   resources :driving_courses
-  resources :carts
+  resources :carts, path: 'mon_panier'
 
   scope '/checkout' do
     post 'create', to: 'checkout#create', as: 'checkout_create'
