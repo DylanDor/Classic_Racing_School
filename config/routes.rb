@@ -10,21 +10,21 @@ Rails.application.routes.draw do
       root to: "users#index"
     end
 
-  resources :cart_items
+  resources :cart_items, :only =>[:create, :destroy]
   
-  devise_for :users
+  devise_for :users, path: 'mon_compte'
   resources :users, :only =>[:show, :edit, :update, :destroy], path: 'mon_compte'
 
 
-  resources :orders
-  resources :options
-  resources :driving_courses
-  resources :carts, path: 'mon_panier'
+  resources :orders, :only => [:index], path: 'commandes'
+  resources :options, :only => [:index]
+  resources :driving_courses, :only => [:show, :index], path: 'stages'
+  resources :carts, :only => [:show, :edit, :update, :destroy], path: 'mon_panier'
 
-  scope '/checkout' do
+  scope '/paiement' do
     post 'create', to: 'checkout#create', as: 'checkout_create'
-    get 'success', to: 'checkout#success', as: 'checkout_success'
-    get 'cancel', to: 'checkout#cancel', as: 'checkout_cancel'
+    get 'succes', to: 'checkout#success', as: 'checkout_success'
+    get 'annulation', to: 'checkout#cancel', as: 'checkout_cancel'
   end
 
   root "driving_courses#index"
