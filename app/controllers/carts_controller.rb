@@ -1,10 +1,6 @@
 class CartsController < ApplicationController
   before_action :set_cart, only: %i[ show edit update destroy ]
 
-  # GET /carts or /carts.json
-  def index
-    @carts = Cart.all
-  end
 
   # GET /carts/1 or /carts/1.json
   def show
