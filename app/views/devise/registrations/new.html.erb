@@ -28,10 +28,8 @@
                           </div>
                           <div class="flex items-center justify-between mt-6">
                               <div class="mr-1">
-                                <label class="flex items-center">
-                                  <input type="checkbox" class="form-checkbox">
-                                  <span class="text-sm ml-2">M'abonner à la newsletter.</span>
-                                </label>
+                                <%= f.check_box :newsletter, class: "form-checkbox" %>
+                                <%= f.label :"S'inscrire à notre Newsletter", class: "text-sm ml-2" %>
                               </div>
                               <%= f.submit "Inscription", class: "btn bg-gold hover:bg-gold text-white ml-3", data: { turbo: false }%>
                           </div>

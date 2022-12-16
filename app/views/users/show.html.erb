@@ -13,7 +13,11 @@
             <div class="grow">
             <!-- Panel body -->
                 <div class="p-6 space-y-6">
-                    <h2 class="text-2xl text-slate-800 font-bold mb-5">Bienvenue <%= @user.email %> </h2>
+                    <% if current_user.first_name.blank? %>
+                        <h2 class="text-2xl text-slate-800 font-bold mb-5">Bienvenue <%= @user.email %> </h2>
+                    <% else %>
+                        <h2 class="text-2xl text-slate-800 font-bold mb-5">Bienvenue <%= @user.last_name.capitalize %> <%= @user.first_name.upcase %> </h2>
+                    <% end %>
                 <hr>
 
             <!-- Email & password -->
@@ -28,6 +32,9 @@
                 <%= render "form", user: @user %>
             </div>
         </div>
-    </div>      
+    </div>
+    <div class="mt-6 text-center lg:text-left">
+        <%= link_to "< Revenir à l'accueil", root_path, class: "text-sm font-medium text-gold hover:text-gold" %>
+   </div>   
 </div>
 
