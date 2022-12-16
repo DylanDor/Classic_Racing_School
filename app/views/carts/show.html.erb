@@ -1,50 +1,40 @@
 <div class=" px-4 sm:px-6 lg:px-8 py-8 w-full flex">
+  <div class="max-w-5xl mx-auto flex flex-col lg:flex-row lg:space-x-8 xl:space-x-16">
 
-    <!-- Page content -->
-    <div class="max-w-5xl mx-auto flex flex-col lg:flex-row lg:space-x-8 xl:space-x-16">
-
-        <!-- Cart items -->
-        <div class="mb-6 lg:mb-0">
-          
-            <header class="mb-2">
-                <!-- Title -->
-                <h1 class="text-2xl md:text-3xl text-neutral-900 underline underline-offset-8 font-bold"> RÉSERVATION ✨</h1>
-            </header>
+    <div class="mb-6 lg:mb-0">
+      <header class="mb-2">
+        <h1 class="text-2xl md:text-3xl text-neutral-900 underline underline-offset-8 font-bold"> RÉSERVATION ✨</h1>
+      </header>
             
-            <ul>
-                <%= render "cart_items" %>
-            </ul>
+      <ul>
+        <%= render "cart_items" %>
+      </ul>
 
-            <div class="mt-6 text-center lg:text-left">
-                <%= link_to "< Revenir à l'accueil", root_path, class: "text-sm font-medium text-gold hover:text-gold" %>
-            </div>
-
-        </div>
-
-        <!-- Sidebar -->
-        <div class="max-w-sm mx-auto lg:max-w-none">
-            <div class="bg-white p-5 shadow-lg rounded-sm border border-slate-200 lg:w-72 xl:w-80">
-                <div class="text-slate-800 font-semibold mb-2">Récapitulatif</div>
-                <!-- Order details -->
-                <ul class="mb-4">
-
-                    <li class="text-sm w-full flex justify-between py-3 border-b border-slate-200">
-                        <div>Total du panier</div>
-                        <div class="font-medium text-emerald-600"><%= '%.2f' % @total_price %> €</div>
-                    </li>
-                </ul>
-                <div class="mb-4">
-                    <%= form_tag checkout_create_path, method: :post, data: { turbo: false } do %>
-                    <input type="hidden" name="total" value="<%= @total_price %>" autocomplete="off" />
-                    <%= submit_tag "PASSER COMMANDE - #{'%.2f' % @total_price}  €", class: "cursor-pointer btn w-full bg-gold hover:bg-gold text-white" %>
-                    <% end %>
-                </div>
-                
-            </div>
-        </div>
-
+      <div class="mt-6 text-center lg:text-left">
+        <%= link_to "< Revenir à l'accueil", root_path, class: "text-sm font-medium text-gold hover:text-gold" %>
+      </div>
     </div>
 
+    <!-- Sidebar -->
+    <div class="max-w-sm mx-auto lg:max-w-none">
+      <div class="bg-white p-5 shadow-lg rounded-sm border border-slate-200 lg:w-72 xl:w-80">
+        <div class="text-slate-800 font-semibold mb-2">Récapitulatif
+        </div>
+          <!-- Order details -->
+        <ul class="mb-4">
+          <li class="text-sm w-full flex justify-between py-3 border-b border-slate-200">
+            <div>Total du panier</div>
+            <div class="font-medium text-emerald-600"><%= '%.2f' % @total_price %> €</div>
+          </li>
+        </ul>
+        <div class="mb-4">
+          <%= form_tag checkout_create_path, method: :post, data: { turbo: false } do %>
+            <input type="hidden" name="total" value="<%= @total_price %>" autocomplete="off" />
+            <%= submit_tag "PASSER COMMANDE - #{'%.2f' % @total_price}  €", class: "cursor-pointer btn w-full bg-gold hover:bg-gold text-white" %>
+          <% end %>
+        </div>
+            
+      </div>
+    </div>
+  </div>
 </div>
-
-  

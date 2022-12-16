@@ -1,45 +1,44 @@
 <div class="col-span-full md:col-span-6 xl:col-span-4 bg-white shadow-lg rounded-sm border border-slate-200 overflow-hidden;">
-    <div class="flex flex-col h-full">
-        <!-- Image -->
-        <div>
-            <%= image_tag driving_course.img_url, class: "w-full", alt: "Photo de voiture sur circuit" %>
-        </div>
-        <!-- Card Content -->
-        <div class="grow flex flex-col p-5">
-            <!-- Card body --> 
-            <div class="grow">
-                <header class="mb-2">
-                    <h3 class="text-lg text-gold font-semibold mb-1"><%= driving_course.title %></h3>
-                    <div class="text-sm"> <%= driving_course.description %></div><br>
-                    <div class="text-sm"> <%= driving_course.date.strftime("Le %d/%m/%Y à %H:%M") %></div>
-                </header>
-            </div>
-            <!-- footer card -->
-            <div class="border-t border-slate-200  ">
-                <div class="flex divide-x divide-slate-200 items-center ">
-                    <div class="block flex-1 text-center  text-gold-500 hover:text-gold-700 font-medium px-2 py-3">
-                        <div class="flex justify-left">
-                            <span class="uppercase text-xl font-semibold text-neutral-900">à partir de <br> <span class="inline-flex text-2xl font-semibold  text-gold rounded-full text-left px-2 py-0.5"><%= '%.0f' % driving_course.price %>€</span></span>
-                        </div>
-                    </div>
-                
-                    <div class="block flex-1 text-center text-slate-600 hover:text-slate-800 font-medium px-2 py-3 group" >
-                        <div class="flex-col justify-center">
-                            <% if user_signed_in? %>
-                                <%= form_with(url: cart_items_path, method: :post) do |f| %>
-                                    <%= f.hidden_field :id, value: driving_course.id %>
-                                    <%= f.submit "Réservez maintenant", class: "cursor-pointer btn-sm w-full bg-gold text-white uppercase m-1" %>
-                                <% end %>
-                                <%= link_to "En savoir plus", driving_course_path(driving_course.id), class: "btn-sm w-full bg-gold text-white uppercase m-1" %>
-                            <% else %>
-                                <%= link_to "Réservez maintenant", new_user_session_path, class: "cursor-pointer btn-sm w-full bg-gold text-white uppercase m-1" %>
-                                <%= link_to "En savoir plus", driving_course_path(driving_course.id), class: "btn-sm w-full bg-gold text-white uppercase m-1" %>
-                            <% end %>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="flex flex-col h-full">
+    <!-- Image -->
+    <div>
+      <%= image_tag driving_course.img_url, class: "w-full", alt: "Photo de voiture sur circuit" %>
     </div>
+    <!-- Card Content -->
+    <div class="grow flex flex-col p-5">
+      <!-- Card body --> 
+      <div class="grow">
+        <header class="mb-2">
+          <h3 class="text-lg text-gold font-semibold mb-1"><%= driving_course.title %></h3>
+          <div class="text-sm"><%= driving_course.description %></div><br>
+          <div class="text-sm"><%= driving_course.date.strftime("Le %d/%m/%Y à %H:%M") %></div>
+        </header>
+      </div>
+      <!-- footer card -->
+      <div class="border-t border-slate-200  ">
+        <div class="flex divide-x divide-slate-200 items-center ">
+          <div class="block flex-1 text-center  text-gold-500 hover:text-gold-700 font-medium px-2 py-3">
+            <div class="flex justify-left">
+              <span class="uppercase text-xl font-semibold text-neutral-900">à partir de <br>
+              <span class="inline-flex text-2xl font-semibold  text-gold rounded-full text-left px-2 py-0.5"><%= '%.0f' % driving_course.price %>€</span></span>
+            </div>
+          </div>
+          <div class="block flex-1 text-center text-slate-600 hover:text-slate-800 font-medium px-2 py-3 group" >
+            <div class="flex-col justify-center">
+              <% if user_signed_in? %>
+                <%= form_with(url: cart_items_path, method: :post) do |f| %>
+                  <%= f.hidden_field :id, value: driving_course.id %>
+                  <%= f.submit "Réservez maintenant", class: "cursor-pointer btn-sm w-full bg-gold text-white uppercase m-1" %>
+                <% end %>
+                <%= link_to "En savoir plus", driving_course_path(driving_course.id), class: "btn-sm w-full bg-gold text-white uppercase m-1" %>
+              <% else %>
+                <%= link_to "Réservez maintenant", new_user_session_path, class: "cursor-pointer btn-sm w-full bg-gold text-white uppercase m-1" %>
+                <%= link_to "En savoir plus", driving_course_path(driving_course.id), class: "btn-sm w-full bg-gold text-white uppercase m-1" %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-

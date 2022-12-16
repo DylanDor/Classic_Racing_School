@@ -1,19 +1,18 @@
 <tbody class="text-sm" x-data="{ open: false }">
-  <!-- Row -->
   <tr>
-      <td class="px-2 first:pl-5 last:pr-5 py-3">
-          <div class="flex items-center text-slate-800">
-              <div class="font-medium text-sky-500"> # <%= order.id %></div>
-          </div>
-      </td>
-      <td class="px-2 first:pl-5 last:pr-5 py-3">
-          <div><%= order.created_at %></div>
-      </td>
-      <td class="px-2 first:pl-5 last:pr-5 py-3">
-          <div class="text-left font-medium text-emerald-500"> Total €</div>
-      </td>
-      <td class="px-2 first:pl-5 last:pr-5 py-3">
-        <div class="text-left font-medium text-emerald-500"><%= link_to "Détails", order %></div>
-      </td>
+    <td class="px-2 first:pl-5 last:pr-5 py-3">
+      <div class="flex items-center text-slate-800">
+        <div class="font-medium text-sky-500"> # <%= order.id %></div>
+      </div>
+    </td>
+    <td class="px-2 first:pl-5 last:pr-5 py-3">
+      <div><%= order.created_at %></div>
+    </td>
+    <td class="px-2 first:pl-5 last:pr-5 py-3">
+      <div class="text-left font-medium text-emerald-500"> Total €</div>
+    </td>
+    <td class="px-2 first:pl-5 last:pr-5 py-3">
+      <div class="text-left font-medium text-emerald-500"><%= link_to "Détails", order %></div>
+    </td>
   </tr>
 </tbody>

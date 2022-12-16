@@ -1,52 +1,49 @@
 <div class="m-6 lg:m-20">
-    <div class="p-5 text-center">
-        <h1 class="text-2xl md:text-3xl text-slate-800 font-bold mb-2"> Nous vous remercions, la réservation a bien été prise en compte, elle se trouve dans votre <%= link_to 'panier', cart_path(current_user.cart.id), class: "text-gold"%>.</h1><br>
-       
-        <h2 class="underline text-xl md:text-xl text-slate-800 font-bold mb-2">Nous vous proposons plusieurs options pour accompagner votre réservation.</h2>
-    </div>
-
-    <div id="options" class="grid grid-cols-12 gap-6 space-x-2 md:space-x-8 ">
-        <% @options.each do |option| %>
-        <div class="col-span-full md:col-span-6 xl:col-span-4 bg-white shadow-lg rounded-sm border border-slate-200 overflow-hidden;">
-            <div class="flex flex-col h-full">
-                <!-- Image -->
-                <div>
-                    <%= image_tag option.img_url, class: "w-full", alt: "Photo de voiture sur circuit"%>
-                </div>
-                <!-- Card Content -->
-                <div class="grow flex flex-col p-5">
-                    <!-- Card body -->
-                    <div class="grow">
-                        <header class="mb-2">
-                            <h3 class="text-lg text-gold font-semibold mb-1"><%= option.title %></h3>
-                            <div class="text-sm"> <%= option.description %></div><br>
-                        </header>
-                    </div>
-                    <!-- footer card -->
-                    <div class="border-t border-slate-200 ">
-                        <div class="flex divide-x divide-slate-200 items-center ">
-                            <div class="block flex-1 text-center text-sm text-gold-500 hover:text-gold-700 font-medium px-3 py-4">
-                                <div class="flex justify-left">
-                                    <span class="inline-flex text-2xl font-semibold  text-gold rounded-full text-left px-2 py-0.5"><%= '%.0f' % option.price %>€</span>
-                                </div>
-                            </div>
-                        
-                            <div class="block flex-1 text-center text-sm text-slate-600 hover:text-slate-800 font-medium px-3 py-4 group" >
-                                <div class="flex-col justify-center">
-                                        <%= form_with(url: cart_items_path, method: :post) do |f| %>
-                                            <%= f.hidden_field :id, value: option.id %>
-                                            <%= f.submit "Ajouter au panier", class: "btn-sm w-full bg-gold text-white uppercase m-1" %>
-                                        <% end %>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  <div class="p-5 text-center">
+    <h1 class="text-2xl md:text-3xl text-slate-800 font-bold mb-2"> Nous vous remercions, la réservation a bien été prise en compte, elle se trouve dans votre <%= link_to 'panier', cart_path(current_user.cart.id), class: "text-gold"%>.</h1><br>  
+    <h2 class="underline text-xl md:text-xl text-slate-800 font-bold mb-2">Nous vous proposons plusieurs options pour accompagner votre réservation.</h2>
+  </div>
+  <div id="options" class="grid grid-cols-12 gap-6 space-x-2 md:space-x-8 ">
+    <% @options.each do |option| %>
+      <div class="col-span-full md:col-span-6 xl:col-span-4 bg-white shadow-lg rounded-sm border border-slate-200 overflow-hidden;">
+        <div class="flex flex-col h-full">
+          <!-- Image -->
+          <div>
+            <%= image_tag option.img_url, class: "w-full", alt: "Photo de voiture sur circuit"%>
+          </div>
+          <!-- Card Content -->
+          <div class="grow flex flex-col p-5">
+            <!-- Card body -->
+            <div class="grow">
+              <header class="mb-2">
+                <h3 class="text-lg text-gold font-semibold mb-1"><%= option.title %></h3>
+                <div class="text-sm"> <%= option.description %></div><br>
+              </header>
             </div>
+            <!-- footer card -->
+            <div class="border-t border-slate-200 ">
+              <div class="flex divide-x divide-slate-200 items-center ">
+                <div class="block flex-1 text-center text-sm text-gold-500 hover:text-gold-700 font-medium px-3 py-4">
+                  <div class="flex justify-left">
+                    <span class="inline-flex text-2xl font-semibold  text-gold rounded-full text-left px-2 py-0.5"><%= '%.0f' % option.price %>€</span>
+                  </div>
+                </div>
+                <div class="block flex-1 text-center text-sm text-slate-600 hover:text-slate-800 font-medium px-3 py-4 group" >
+                  <div class="flex-col justify-center">
+                    <%= form_with(url: cart_items_path, method: :post) do |f| %>
+                      <%= f.hidden_field :id, value: option.id %>
+                      <%= f.submit "Ajouter au panier", class: "btn-sm w-full bg-gold text-white uppercase m-1" %>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <% end %>
-    </div>
-    <div class="mt-6 text-center lg:text-left">
-        <%= link_to "< Revenir à l'accueil", root_path, class: "text-sm font-medium text-gold hover:text-gold" %>
-   </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="mt-6 text-center lg:text-left">
+    <%= link_to "< Revenir à l'accueil", root_path, class: "text-sm font-medium text-gold hover:text-gold" %>
+  </div>
 </div>  
