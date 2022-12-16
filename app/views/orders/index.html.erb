@@ -1,17 +1,32 @@
-<main>
-    <div class="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-9xl mx-auto shadow-3xl">
-        <!-- Page header -->
-        <div class="bg-white shadow-lg rounded-sm mb-8">
-            <div class="flex flex-col md:flex-row">
-                <!-- Sidebar -->
-                <%= render 'users/sidedashboard' %>
-                <div class="grow">
-                    <!-- Panel body -->
-                    <div class="p-6 space-y-6">
-                        <h2 class="text-2xl text-slate-800 font-bold mb-5">Mes commandes</h2>
-                        <table class="table-auto w-full">
-                            <!-- Table header -->
-                            <thead class="text-xs text-center font-semibold uppercase text-slate-500 border-t border-b border-slate-200">
+<div class="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-9xl mx-auto shadow-3xl">
+    <!-- Page header -->
+    <div class="bg-white shadow-lg rounded-sm mb-8">
+        <div class="flex flex-col md:flex-row">
+            <!-- Sidebar -->
+            <%= render 'users/sidedashboard' %>
+            <div class="grow">
+                <!-- Panel body -->
+                <div class="p-6 space-y-6">
+                    <h2 class="text-2xl text-slate-800 font-bold mb-5">Mes commandes</h2>
+                    <table class="table-auto w-full">
+                        <!-- Table header -->
+                        <thead class="text-xs text-center font-semibold uppercase text-slate-500 border-t border-b border-slate-200">
+                            <tr>
+                                <th class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap">
+                                    <div class="font-semibold text-left">Numéro de Commande</div>
+                                </th>
+                                <th class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap">
+                                    <div class="font-semibold text-left">Date de paiement</div>
+                                </th>
+                                <th class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap">
+                                    <div class="font-semibold text-right">Prix Total</div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <!-- Table body -->
+                        <tbody class="text-sm divide-y divide-slate-200 border-b border-slate-200">
+                            <!-- Row -->
+                            <% @orders.each do |order| %>
                                 <tr>
                                     <th class="px-2 first:pl-5 last:pr-5 py-3 ">
                                         <div class="font-semibold text-left">Numéro de Commande</div>
@@ -40,20 +55,25 @@
                                             <div class="text-left">
                                                 <%= order.created_at.strftime("%d/%m/%Y à %H:%M") %>
                                             </div>
-                                        </td>
-                                        <td class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap w-px">
-                                            <div class="text-right text-slate-700 font-medium"><%= '%.2f' % order.total_price %> €</div>
-                                        </td>
-                                    </tr>
-                                    <% end %>
-                            </tbody>
-                        </table>
-                    </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap">
+                                        <div class="text-left">
+                                            <%= order.created_at.strftime("%d/%m/%Y à %H:%M") %>
+                                        </div>
+                                    </td>
+                                    <td class="px-2 first:pl-5 last:pr-5 py-3 whitespace-nowrap w-px">
+                                        <div class="text-right text-slate-700 font-medium"><%= '%.2f' % order.total_price %> €</div>
+                                    </td>
+                                </tr>
+                                <% end %>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
-             <div class="mt-6 text-center lg:text-left">
-                 <%= link_to "< Revenir à l'accueil", root_path, class: "text-sm font-medium text-gold hover:text-gold" %>
-            </div>
-    </div>       
-</main>
+    </div>
+    <div class="mt-6 text-center lg:text-left">
+            <%= link_to "< Revenir à l'accueil", root_path, class: "text-sm font-medium text-gold hover:text-gold" %>
+    </div>
+</div>        

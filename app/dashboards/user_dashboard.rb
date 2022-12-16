@@ -39,6 +39,7 @@ class UserDashboard < Administrate::BaseDashboard
     photo_publication_consent: Field::Boolean,
     instagram_nickname: Field::String,
     personal_data_consent: Field::Boolean,
+    admin: Field::Boolean,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -53,6 +54,7 @@ class UserDashboard < Administrate::BaseDashboard
     last_name
     newsletter
     cart
+    admin
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -89,6 +91,7 @@ class UserDashboard < Administrate::BaseDashboard
     photo_publication_consent
     instagram_nickname
     personal_data_consent
+    admin
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -123,6 +126,7 @@ class UserDashboard < Administrate::BaseDashboard
     photo_publication_consent
     instagram_nickname
     personal_data_consent
+    admin
   ].freeze
 
   # COLLECTION_FILTERS

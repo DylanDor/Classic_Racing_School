@@ -26,12 +26,18 @@
                                 <%= f.password_field :password_confirmation, autocomplete: "nouveau mot de passe", class: "form-input w-full", id: "password_confirmation" %>
                               </div>
                           </div>
-                          <div class="flex items-center justify-between mt-6">
+                          <div class="flex flex-col items-start mt-6">
+                            <div class="mr-1">
+                                <%= f.check_box :personal_data_consent, class: "form-checkbox", checked: "checked" %>
+                                <%= f.label :"Autoriser le stockage de données", class: "text-sm ml-2" %>
+                              </div>
                               <div class="mr-1">
                                 <%= f.check_box :newsletter, class: "form-checkbox" %>
-                                <%= f.label :"S'inscrire à notre Newsletter", class: "text-sm ml-2" %>
+                                <%= f.label :"Abonnement Newsletter", class: "text-sm ml-2" %>
                               </div>
-                              <%= f.submit "Inscription", class: "btn bg-gold hover:bg-gold text-white ml-3", data: { turbo: false }%>
+                          </div>
+                          <div class="mt-6">
+                            <%= f.submit "Inscription", class: "btn bg-gold hover:bg-gold text-white ml-3", data: { turbo: false }%>
                           </div>
                       <% end %>
                       <div class="pt-5 mt-6 border-t border-slate-200">
