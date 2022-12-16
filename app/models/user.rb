@@ -15,6 +15,7 @@ class User < ApplicationRecord
   has_one :cart, dependent: :destroy
 
   validates :email, presence: true, uniqueness: true
+  validates :personal_data_consent, acceptance: {message: "Vous devez consentir au stockage de donnnées"}
   validates :first_name, allow_blank: true, length: {in: 3..100, message: "Votre Nom doit avoir une longueur comprise entre 3 and 100 caractères"}
   validates :last_name, allow_blank: true, length: {in: 3..100, message: "Votre Prénom doit avoir une longueur comprise entre 3 and 100 caractères"}
   validates :birthday, allow_blank: true, comparison: {less_than: Date.today, message: "Conflit temporel : Vous ne pouvez pas être né dans le futur..."}
