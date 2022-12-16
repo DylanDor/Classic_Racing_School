@@ -6,7 +6,7 @@
     <p>Vous allez recevoir un email de confirmation avec les détails de votre commande.</p><br>
 
     <h6>Statut de votre paiement de <span class="text-xl md:text-xl text-slate-800 font-bold mb-2"><%= number_to_currency(@payment_intent.amount_received / 100.0, unit: "€", separator: ",", delimiter: "", format: "%n %u") %></span> : </h6>
-        <p><%= @payment_intent.status %></p>
+        
 </div>
 
 
