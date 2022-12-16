@@ -12,7 +12,7 @@ class User < ApplicationRecord
 
   devise :database_authenticatable, :registerable,
   :recoverable, :rememberable, :validatable
-  has_one :cart
+  has_one :cart, dependent: :destroy
 
   validates :email, presence: true, uniqueness: true
   validates :personal_data_consent, acceptance: {message: "Vous devez consentir au stockage de donnnées"}
