@@ -21,7 +21,7 @@
                 <% if devise_mapping.rememberable? %>
                   <div>
                     <%= f.check_box :remember_me, class: "form-checkbox" %>
-                    <%= f.label :remember_me, 'Se souvenir de moi', class: "text-sm font-medium" %>
+                    <%= f.label :remember_me, 'Se souvenir de moi', class: "text-sm font-medium", for:"user_se_souvenir_de_moi" %>
                   </div>
                 <% end %>
               </div>
@@ -50,4 +50,3 @@
     </div>
   </div>
 </div>
-<script src="./js/vendors/alpinejs.min.js" defer=""></script>
