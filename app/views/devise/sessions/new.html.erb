@@ -11,17 +11,17 @@
               <%= render "devise/shared/error_messages", resource: resource %>
               <div class="space-y-4">
                 <div>
-                  <%= f.label :email, class: "block text-sm font-medium", for:"user_email" %>
+                  <%= f.label :email, 'Email', class: "block text-sm font-medium" %>
                   <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-input w-full", id: "email" %>
                 </div>
                 <div>
-                  <%= f.label :password, class: "block text-sm font-medium mb-1", for:"user_password" %>
+                  <%= f.label :password, 'Mot de passe', class: "block text-sm font-medium mb-1" %>
                   <%= f.password_field :password, autocomplete: "current-password", class: "form-input w-full", id: "password" %>
                 </div>
                 <% if devise_mapping.rememberable? %>
                   <div>
                     <%= f.check_box :remember_me, class: "form-checkbox" %>
-                    <%= f.label :se_souvenir_de_moi, class: "text-sm font-medium", for:"user_se_souvenir_de_moi" %>
+                    <%= f.label :remember_me, 'Se souvenir de moi', class: "text-sm font-medium" %>
                   </div>
                 <% end %>
               </div>
