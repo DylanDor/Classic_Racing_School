@@ -2,7 +2,6 @@
   <% if driving_course.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(driving_course.errors.count, "error") %> prohibited this driving_course from being saved:</h2>
-
       <ul>
         <% driving_course.errors.each do |error| %>
           <li><%= error.full_message %></li>
