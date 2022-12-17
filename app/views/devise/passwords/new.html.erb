@@ -11,23 +11,22 @@
               <%= render "devise/shared/error_messages", resource: resource %>
               <div class="space-y-4">
                 <div>
-                  <%= f.label :email, class: "block text-sm font-medium"%>
+                  <%= f.label :email, 'Email', class: "block text-sm font-medium"%>
                   <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-input w-full", id: "email" %>
                 </div>
               </div>
               <div class="flex items-center justify-between mt-6 ">
-                <div></div>
-                <%= f.submit "Réinitialiser Mot de Passe", class: "btn bg-gold hover:bg-gold text-white ml-3" %>
+                <%= f.submit "Réinitialiser mot de passe", class: "btn bg-gold hover:bg-gold text-white" %>
               </div>
             <% end %>
             <div class="pt-5 mt-6 border-t border-slate-200">
               <div class="text-sm">
                 <%- if controller_name != 'sessions' %>
-                  J'ai déjà un Compte : <%= link_to "Connexion", new_session_path(resource_name), class: "font-medium text-gold hover:text-gold" %>
+                  J'ai déjà un compte : <%= link_to "Connexion", new_session_path(resource_name), class: "font-medium text-gold hover:text-gold" %>
                 <% end %>
                 <br>
                 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-                  Je n'ai pas de Compte : <%= link_to "Inscription", new_registration_path(resource_name), class: "font-medium text-gold hover:text-gold" %><br>
+                  Je n'ai pas de compte : <%= link_to "Inscription", new_registration_path(resource_name), class: "font-medium text-gold hover:text-gold" %><br>
                 <% end %>
               </div>
             </div>

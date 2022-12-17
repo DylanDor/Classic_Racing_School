@@ -11,39 +11,39 @@
               <%= render "devise/shared/error_messages", resource: resource %>
               <div class="space-y-4">
                 <div>
-                  <%= f.label :email, class: "block text-sm font-medium"%>
+                  <%= f.label :email, 'Email', class: "block text-sm font-medium"%>
                   <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-input w-full", id: "email" %>
                 </div>
                 <div>
-                  <%= f.label :password, class: "block text-sm font-medium"%>
+                  <%= f.label :password, 'Mot de passe', class: "block text-sm font-medium"%>
                   <% if @minimum_password_length %>
                     <em class="text-sm mb-1">(<%= @minimum_password_length %> caractères minimum)</em>
                   <% end %>
                   <%= f.password_field :password, autocomplete: "nouveau mot de passe", class: "form-input w-full", id: "password" %>
                 </div>
                 <div>
-                  <%= f.label :password_confirmation, class: "block text-sm font-medium" %>
+                  <%= f.label :password_confirmation, 'Confirmation de mot de passe', class: "block text-sm font-medium" %>
                   <%= f.password_field :password_confirmation, autocomplete: "nouveau mot de passe", class: "form-input w-full", id: "password_confirmation" %>
                 </div>
               </div>
               <div class="flex flex-col items-start mt-6">
                 <div class="mr-1">
                   <%= f.check_box :personal_data_consent, class: "form-checkbox", checked: "checked" %>
-                  <%= f.label :"Autoriser le stockage de données", class: "text-sm ml-2" %>
+                  <%= f.label :personal_data_consent, 'Autoriser le stockage de données', class: "text-sm ml-2" %>
                 </div>
                 <div class="mr-1">
                   <%= f.check_box :newsletter, class: "form-checkbox" %>
-                  <%= f.label :"Abonnement Newsletter", class: "text-sm ml-2" %>
+                  <%= f.label :newsletter, 'Abonnement newsletter', class: "text-sm ml-2" %>
                 </div>
               </div>
               <div class="mt-6">
-                <%= f.submit "Inscription", class: "btn bg-gold hover:bg-gold text-white ml-3", data: { turbo: false }%>
+                <%= f.submit "Inscription", class: "btn bg-gold hover:bg-gold text-white", data: { turbo: false }%>
               </div>
             <% end %>
             <div class="pt-5 mt-6 border-t border-slate-200">
               <div class="text-sm">
                 <%- if controller_name != 'sessions' %> J'ai déjà un compte :  
-                  <%= link_to "Me Connecter", new_session_path(resource_name), class: "font-medium text-gold hover:text-gold" %>
+                  <%= link_to "Me connecter", new_session_path(resource_name), class: "font-medium text-gold hover:text-gold" %>
                 <% end %>
               </div>
             </div>

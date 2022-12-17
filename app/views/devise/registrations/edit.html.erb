@@ -19,16 +19,16 @@
                 
               <div class="sm:flex sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-5">
                 <div class="sm:w-1/3">
-                  <%= f.label :Mot_de_passe_actuel %> <br>
+                  <%= f.label :current_password, 'Mot de passe actuel' %>
                   <%= f.password_field :current_password, autocomplete: "mot de passe actuel", class: "form-input w-full" %>
                 </div>
               </div>
 
               <div class="sm:flex sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-5">
                 <div class="sm:w-1/3">
-                  <%= f.label :Nouveau_mot_de_passe %> <br>
+                  <%= f.label :password, 'Nouveau mot de passe' %>
                   <%= f.password_field :password, autocomplete: "nouveau mot de passe", class: "form-input w-full" %>
-                  <% if @minimum_password_length %> <br>
+                  <% if @minimum_password_length %>
                     <em> <%= @minimum_password_length %> caractères minimum </em>
                   <% end %>
                 </div>
@@ -36,19 +36,17 @@
 
               <div class="sm:flex sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-5">
                 <div class="sm:w-1/3">
-                  <%= f.label :Confirmation_du_mot_de_passe %><br>
+                  <%= f.label :password_confirmation, 'Confirmation de mot de passe' %>
                   <%= f.password_field :password_confirmation, autocomplete: "nouveau mot de passe", class: "form-input w-full" %>
                 </div>
               </div>
 
               <div class="actions">
-                <footer>
-                  <div class="flex flex-col px-6 py-5 ">
-                    <div class="flex self-end">
-                      <%= f.submit 'Sauvegarder les changements', class: "btn-sm w-full bg-gold hover:bg-gold text-white ml-3" %>
-                    </div>
+                <div class="flex flex-col px-6 py-5 ">
+                  <div class="flex self-end">
+                    <%= f.submit 'Sauvegarder les changements', class: "btn-sm w-full bg-gold hover:bg-gold text-white ml-3" %>
                   </div>
-                </footer>
+                </div>
               </div>
             <% end %>
           </section>
@@ -61,7 +59,7 @@
 
               <div class="sm:flex sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-5">
                 <div class="sm:w-1/3">
-                  <%= f.label :email %><br>
+                  <%= f.label :email, 'Nouveau email' %>
                   <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-input w-full" %>
                 </div>
               </div>
@@ -72,7 +70,7 @@
 
               <div class="sm:flex sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-5">
                 <div class="sm:w-1/3">
-                  <%= f.label :Mot_de_passe_actuel %> <i>(nécessite votre mot de passe actuel pour confirmer vos changements)</i><br>
+                  <%= f.label :current_password, 'Mot de passe actuel' %>
                   <%= f.password_field :current_password, autocomplete: "mot de passe actuel", class: "form-input w-full" %>
                 </div>
               </div>
