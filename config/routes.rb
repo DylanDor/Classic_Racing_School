@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
       root to: "users#index"
     end
+  
+  get '/mentions-legales', to: 'statics_pages#legacy'
 
   resources :cart_items, :only =>[:create, :destroy]
   
