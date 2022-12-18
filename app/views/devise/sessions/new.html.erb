@@ -1,0 +1,52 @@
+<div class="font-inter antialiased bg-slate-100 text-slate-600">
+  <div class="bg-white">
+    <div class="relative flex">
+      <div class="w-full md:w-1/2">
+        <div class="min-h-screen h-full flex flex-col after:flex-1">
+          <div class="flex-1">
+          </div>
+          <div class="max-w-sm mx-auto px-4 py-8">
+            <h1 class="text-3xl text-slate-800 font-bold mb-6">Bienvenue ! ✨</h1>
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+              <%= render "devise/shared/error_messages", resource: resource %>
+              <div class="space-y-4">
+                <div>
+                  <%= f.label :email, 'Email', class: "block text-sm font-medium" %>
+                  <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-input w-full", id: "email" %>
+                </div>
+                <div>
+                  <%= f.label :password, 'Mot de passe', class: "block text-sm font-medium mb-1" %>
+                  <%= f.password_field :password, autocomplete: "current-password", class: "form-input w-full", id: "password" %>
+                </div>
+                <% if devise_mapping.rememberable? %>
+                  <div>
+                    <%= f.check_box :remember_me, class: "form-checkbox" %>
+                    <%= f.label :remember_me, 'Se souvenir de moi', class: "text-sm font-medium", for:"user_se_souvenir_de_moi" %>
+                  </div>
+                <% end %>
+              </div>
+              <div class="flex items-center justify-between mt-6">
+                <div class="mr-1">
+                  <%- if devise_mapping.recoverable? && controller_name !='passwords' && controller_name !='registrations' %>
+                    <%= link_to "Mot de passe oublié ?", new_password_path(resource_name), class: "text-sm underline hover:no-underline" %><br />
+                  <% end %>
+                </div>
+                <%= f.submit "Connexion", class: "btn bg-gold hover:bg-gold text-white ml-3" %>
+              </div>
+            <% end %>
+            <div class="pt-5 mt-6 border-t border-slate-200">
+              <div class="text-sm">
+                <%- if devise_mapping.registerable? && controller_name !='registrations' %>
+                  Je n'ai pas de compte : <%= link_to "Créer un compte", new_registration_path(resource_name), class: "font-medium text-gold hover:text-gold" %><br />
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hidden md:block absolute top-0 bottom-0 right-0 md:w-1/2" aria-hidden="true">
+        <%= image_tag "registrations/sign_in.jpg", class: "object-cover object-center w-full h-full", alt: "Authentication image", style: "width=760 height=1024" %>
+      </div>
+    </div>
+  </div>
+</div>

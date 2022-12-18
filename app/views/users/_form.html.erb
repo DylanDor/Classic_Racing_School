@@ -1,0 +1,157 @@
+<div class="grow">
+  <%= form_with(model: @user, url: user_path(@user), method: "put") do |f| %>
+
+    <div class="p-6 space-y-6">
+      <h2 class="text-2xl text-slate-800 font-bold mb-5">Les données de votre profil</h2>
+      <div class="text-sm">Vous vous apprêtez à faire partie du club des pilotes de la Classic Racing School. Ce
+        formulaire vous permettra de nous communiquer des informations importantes pour vous accueillir dans les
+        meilleures conditions.
+      </div>
+      <div class="text-sm">RGPD : Nous recueillons ces informations dans le but de vous fournir le meilleur service
+        client possible et afin de pouvoir vous contacter facilement.
+      </div>
+      <hr>
+
+    <section>
+      <br>
+      <h3 class="text-xl leading-snug text-slate-800 font-bold mb-1">Vos informations </h3>
+      <div class="sm:flex sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-5">
+        <div class="sm:w-1/3">
+          <%= f.label :first_name, 'Nom', class: "block text-sm font-medium mb-1" %>
+          <%= f.text_field :first_name, {class: "form-input w-full"} %>
+        </div>
+        <div class="sm:w-1/3">
+          <%= f.label :last_name, 'Prénom', class: "block text-sm font-medium mb-1" %>
+          <%= f.text_field :last_name, {class: "form-input w-full"} %>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sm:flex sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-5">
+
+        <div class="sm:w-1/3">
+          <%= f.label :address, 'Adresse', class: "block text-sm font-medium mb-1" %>
+          <%= f.text_field :address, class: "form-input w-full" %>
+        </div>
+        <div class="sm:w-1/3">
+          <%= f.label :birthday, 'Date de naissance', class: "block text-sm font-medium mb-1" %>
+            <%= f.date_field :birthday, max: Date.today, class: "form-input w-full" %>
+        </div>
+      </div>
+      <div class="sm:flex sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-5">
+        <div class="sm:w-1/3">
+          <%= f.label :phone, 'Téléphone', class: "block text-sm font-medium mb-1" %>
+          <%= f.telephone_field :phone, class: "form-input w-full" %>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="text-xl leading-snug text-slate-800 font-bold mb-1">Votre gabarit</h3>
+      <div class="text-sm">L'ensemble des informations ci-dessous nous seront nécessaires pour vous accueillir avec une tenue complète adaptée à votre gabarit.
+      </div>
+      <div class="sm:flex sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-5">
+        <div class="sm:w-1/3">
+          <%= f.label :height, 'Taille (en cm)', class: "block text-sm font-medium mb-1" %>
+          <%= f.number_field :height, min: 140, class: "form-input w-full" %>
+        </div>
+        <div class="sm:w-1/3">
+          <%= f.label :weight, 'Poids (en kg)', class: "block text-sm font-medium mb-1" %>
+          <%= f.number_field :weight, min: 40, class: "form-input w-full" %>
+        </div>
+      </div>
+      <div class="sm:flex sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-5">
+        <div class="sm:w-1/3">
+          <%= f.label :helmet_size, 'Taille du casque', class: "block text-sm font-medium mb-1" %>
+          <%= f.select :helmet_size, ["S", "M", "L", "XL"], {include_blank: "Selectionner une taille"},{class: "form-select w-full"} %>
+        </div>
+        <div class="sm:w-1/3">
+          <%= f.label :shoe_size, 'Pointure', class: "block text-sm font-medium mb-1" %>
+          <%= f.number_field :shoe_size, min: 36, class: "form-input w-full" %>
+        </div>
+      </div>
+      <div class="sm:flex sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-5">
+        <div class="sm:w-1/3">
+          <%= f.label :clothing_size, 'Taille de votre tenue', class: "block text-sm font-medium mb-1" %>
+          <%= f.select :clothing_size, ["XS", "S" , "M" , "L" , "XL" , "XXL"], {include_blank: "Selectionner une taille"}, {class: "form-select w-full"} %>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="text-xl leading-snug text-slate-800 font-bold mb-1">Votre expérience </h3>
+      <div class="sm:flex sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-5">
+        <div class="sm:w-1/3">
+          <%= f.label :driving_experience, 'Expérience de conduite', class: "block text-sm font-medium mb-1" %>
+          <%= f.select :driving_experience, ["Novice / beginner", "Amateur / Enthusiast", "Avancé / Advanced", "Licence pilote / Racing licence", "Autre"],
+              {include_blank: "Selectionner un niveau"},{class: "form-select w-full"} %>
+        </div>
+      </div>
+      <div class="sm:flex sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-5">
+        <div class="sm:w-1/3">
+          <%= f.label :driving_experience_specifics, "Détails de l'expérience", class: "block text-sm font-medium mb-1" %>
+          <%= f.text_area :driving_experience_specifics, class: "form-input w-full", rows: "8" %>
+        </div>
+        <div class="sm:w-1/3">
+          <%= f.label :coaching_expectations, 'Attentes vis à vis du coaching', class: "block text-sm font-medium mb-1" %>
+          <%= f.text_area :coaching_expectations, class: "form-input w-full", rows: "8" %>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="text-xl leading-snug text-slate-800 font-bold mb-1">Autres informations </h3>
+      <div class="sm:flex sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-5">
+        <div class="sm:w-1/3">
+          <%= f.label :food_restriction, 'Restrictions alimentaires', class: "block text-sm font-medium mb-1" %>
+          <%= f.text_field :food_restriction, class: "form-input w-full" %>
+        </div>
+        <div class="sm:w-1/3">
+          <%= f.label :medical_contraindication, 'Contre-indications médicales', class: "block text-sm font-medium mb-1" %>
+          <%= f.text_field :medical_contraindication, class: "form-input w-full" %>
+        </div>
+      </div>
+      <div class="sm:flex sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-5">
+        <div class="sm:w-1/3">
+          <%= f.label :how_know_CRS, 'Où avez-vous connu la Classic Racing School ?', class: "block text-sm font-medium mb-1" %>
+          <%= f.text_field :how_know_CRS, class: "form-input w-full" %>
+        </div>
+        <div class="sm:w-1/3">
+          <%= f.label :people_who_recommended, 'Personnes qui vous ont recommandé notre école', class: "block text-sm font-medium mb-1" %>
+          <%= f.text_field :people_who_recommended, class: "form-input w-full" %>
+        </div>
+      </div>
+      <div class="sm:flex sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-5">
+        <div class="sm:w-1/3">
+          <%= f.label :comments_to_organization, "Commentaire pour l'organisation", class: "block text-sm font-medium mb-1" %>
+          <%= f.text_field :comments_to_organization, class: "form-input w-full" %>
+        </div>
+        <div class="sm:w-1/3">
+          <%= f.label :instagram_nickname, 'Votre compte instagram', class: "block text-sm font-medium mb-1" %>
+          <%= f.text_field :instagram_nickname, class: "form-input w-full" %>
+        </div>
+      </div>
+      <div class="flex">
+        <div class="sm:flex sm:items-center space-y-4 sm:space-y-0 mt-5">
+          <%= f.check_box :photo_publication_consent, class: "form-checkbox" %>
+          <%= f.label :photo_publication_consent, "Autorisation de droit à l'image", class: "text-sm ml-2 mr-4" %>
+        </div>
+        <div class="sm:flex sm:items-center space-y-4 sm:space-y-0 mt-5">
+          <%= f.check_box :newsletter, class: "form-checkbox" %>
+          <%= f.label :newsletter, "S'inscrire à notre Newsletter", class: "text-sm ml-2 mr-4" %>
+        </div>
+      </div>
+      </section>
+    </div>
+
+    <footer>
+      <div class="flex flex-col px-6 py-5 ">
+        <div class="flex self-end">
+          <button class="btn border-slate-200 hover:border-slate-300 text-gold">Annuler</button>
+          <%= f.submit 'Sauvegarder les changements', class: "btn-sm w-full bg-gold hover:bg-gold text-white ml-3" %>
+        </div>
+      </div>
+    </footer>
+  <% end %>
+</div>

@@ -1,0 +1,46 @@
+<div class="m-6 lg:mx-auto lg:my-20 bg-white shadow-lg rounded-sm lg:w-2/5 border border-slate-200">
+  <div class="flex flex-col">
+    <!-- Image -->
+    <div class="">
+      <%= image_tag @driving_course.img_url, class: "w-full", alt: "Photo de voiture sur circuit" %>
+    </div>
+    <!-- Card Content -->
+    <div class="grow flex flex-col p-4">
+      <!-- Card body -->
+      <div class="grow">
+        <header class="mb-2">
+          <h3 class="text-lg text-gold font-semibold mb-1"><%= @driving_course.title %></h3>
+          <div class="text-sm"> <%= @driving_course.description %></div>
+          <div class="text-sm"> <%= @driving_course.date %></div>
+        </header>
+      </div>
+      <!-- footer card -->
+      <div class="border-t border-slate-200 ">
+        <div class="divide-y divide-slate-200 items-center ">
+          <div class="block flex-1 text-center text-sm text-gold-500 hover:text-gold-700 font-normal px-1 py-2">
+            <div class="flex justify-center">
+              <div class="uppercase text-xl font-semibold text-neutral-900">à partir de
+                <span class="uppercase text-xl font-semibold text-gold"> <%= '%.0f' % @driving_course.price %>€</span>
+              </div>
+            </div>
+          </div>
+          <div class="block flex-1 text-center text-slate-600 hover:text-slate-800 font-normal px-0 py-2 group" >
+            <div class="flex-col justify-center">
+              <% if user_signed_in? %>
+                <%= form_with(url: cart_items_path, method: :post) do |f| %>
+                  <%= f.hidden_field :id, value: @driving_course.id %>
+                  <%= f.submit "Réservez maintenant", class: "btn-sm w-full bg-gold text-white uppercase" %>
+                <% end %>
+              <% else %>
+                <%= link_to "Réservez maintenant", new_user_session_path, class: "btn-sm w-full bg-gold text-white uppercase" %>
+              <% end %>
+            </div>
+            <div class="mt-6 text-center lg:text-left">
+              <%= link_to "< Revenir à l'accueil", root_path, class: "text-sm font-medium text-gold hover:text-gold" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+<div class ="pt-8 flex flex-col">
+  <div class="m-auto p-4 text-center rounded-sm text-sm bg-amber-100 border border-amber-200 text-amber-600 drop-shadow-2xl">
+    <div>Nous sommes désolés, le paiement n'a pas abouti.</div>
+    <div><%= link_to "Revenir au panier", cart_path(current_user.cart.id), class: "font-bold" %></div>
+  </div>
+</div>

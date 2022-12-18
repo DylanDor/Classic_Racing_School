@@ -1,0 +1,41 @@
+<div class="font-inter antialiased bg-slate-100 text-slate-600">   
+  <div class="bg-white">
+    <div class="relative flex">
+      <div class="w-full md:w-1/2">
+        <div class="min-h-screen h-full flex flex-col after:flex-1">
+          <div class="flex-1">
+          </div>
+          <div class="max-w-sm mx-auto px-4 py-8">
+            <h1 class="text-3xl text-slate-800 font-bold mb-6">Réinitialisez votre Mot de Passe ✨</h1>
+            <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+              <%= render "devise/shared/error_messages", resource: resource %>
+              <div class="space-y-4">
+                <div>
+                  <%= f.label :email, 'Email', class: "block text-sm font-medium"%>
+                  <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-input w-full", id: "email" %>
+                </div>
+              </div>
+              <div class="flex items-center justify-between mt-6 ">
+                <%= f.submit "Réinitialiser mot de passe", class: "btn bg-gold hover:bg-gold text-white" %>
+              </div>
+            <% end %>
+            <div class="pt-5 mt-6 border-t border-slate-200">
+              <div class="text-sm">
+                <%- if controller_name != 'sessions' %>
+                  J'ai déjà un compte : <%= link_to "Connexion", new_session_path(resource_name), class: "font-medium text-gold hover:text-gold" %>
+                <% end %>
+                <br>
+                <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+                  Je n'ai pas de compte : <%= link_to "Inscription", new_registration_path(resource_name), class: "font-medium text-gold hover:text-gold" %><br>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hidden md:block absolute top-0 bottom-0 right-0 md:w-1/2" aria-hidden="true">
+        <%= image_tag "registrations/reset_password.jpg", class: "object-cover object-center w-full h-full", alt: "Authentication image", style: "width=760 height=1024"%>
+      </div>
+    </div>
+  </div>
+</div>

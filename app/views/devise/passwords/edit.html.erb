@@ -1,0 +1,38 @@
+<div class="font-inter antialiased bg-slate-100 text-slate-600">   
+  <div class="bg-white">
+    <div class="relative flex">
+      <div class="w-full md:w-1/2">
+        <div class="min-h-screen h-full flex flex-col after:flex-1">
+          <div class="flex-1">
+          </div>
+          <div class="max-w-sm mx-auto px-4 py-8">
+            <h1 class="text-3xl text-slate-800 font-bold mb-6">Réinitialisez votre Mot de Passe ✨</h1>
+            <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+              <%= render "devise/shared/error_messages", resource: resource %>
+              <%= f.hidden_field :reset_password_token %>
+              <div class="space-y-4">
+                <div>
+                  <%= f.label :password, "Nouveau mot de passe", class: "block text-sm font-medium" %>
+                  <% if @minimum_password_length %>
+                    <em class="text-sm mb-1">(<%= @minimum_password_length %> caractères minimum)</em>
+                  <% end %>
+                  <%= f.password_field :password, autofocus: true, autocomplete: "Nouveau Mot de Passe", class: "form-input w-full" %>
+                </div>
+                <div>
+                  <%= f.label :password_confirmation, "Confirmation nouveau mot de passe", class: "block text-sm font-medium" %>
+                  <%= f.password_field :password_confirmation, autocomplete: "Nouveau Mot de Passe", class: "form-input w-full" %>
+                </div>
+              </div>
+              <div class="flex items-center justify-between mt-6 ">
+                <%= f.submit "Changer mon mot de passe", class: "btn bg-gold hover:bg-gold text-white" %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="hidden md:block absolute top-0 bottom-0 right-0 md:w-1/2" aria-hidden="true">
+        <%= image_tag "registrations/reset_password.jpg", class: "object-cover object-center w-full h-full", alt: "Authentication image", style: "width=760 height=1024"%>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-9xl mx-auto shadow-3xl">
+  <div class="bg-white shadow-lg rounded-sm mb-8">
+    <div class="flex flex-col md:flex-row md:-mr-px">
+      <%= render 'users/sidedashboard' %>
+      <div class="grow">
+        <div class="p-6 space-y-6">
+          <% if current_user.first_name.blank? %>
+            <h2 class="text-2xl text-slate-800 font-bold mb-5">Bienvenue <%= @user.email %> </h2>
+          <% else %>
+            <h2 class="text-2xl text-slate-800 font-bold mb-5">Bienvenue <%= @user.last_name.capitalize %> <%= @user.first_name.upcase %> </h2>
+          <% end %>
+          <hr>
+          <section>
+            <h3 class="text-xl leading-snug text-slate-800 font-bold mb-1">Modifier mes accès</h3>
+            <div class="text-sm">Vous souhaitez changer votre adresse email et/ou votre mot de passe ?</div>
+            <div class="flex flex-wrap mt-5">
+              <button class="btn border-slate-200 hover:border-slate-300 shadow-sm text-gold"><%= link_to "Cliquez ici", edit_user_registration_path(current_user)%></button>
+            </div>
+          </section> 
+        </div>
+        <%= render "form", user: @user %>
+      </div>
+    </div>
+  </div>
+  <div class="mt-6 text-center lg:text-left">
+    <%= link_to "< Revenir à l'accueil", root_path, class: "text-sm font-medium text-gold hover:text-gold" %>
+  </div>   
+</div>
