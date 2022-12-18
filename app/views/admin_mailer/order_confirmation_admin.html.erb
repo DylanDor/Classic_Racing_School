@@ -521,48 +521,37 @@
                                             </tr>
                                             <tr>
                                                 <td class="r5-i">
-                                                    <table width="100%" cellspacing="0" cellpadding="0" border="0"
-                                                        role="presentation">
+                                                    <table width="100%" cellspacing="0" cellpadding="0" border="0" role="presentation">
                                                         <tr>
-                                                            <th width="100%" valign="top" class="r6-c"
-                                                                style="font-weight: normal;">
-                                                                <table cellspacing="0" cellpadding="0" border="0"
-                                                                    role="presentation" width="100%" class="r1-o"
-                                                                    style="table-layout: fixed; width: 100%;"><!-- -->
+                                                            <th width="100%" valign="top" class="r6-c" style="font-weight: normal;">
+                                                                <table cellspacing="0" cellpadding="0" border="0" role="presentation" width="100%" class="r1-o" style="table-layout: fixed; width: 100%;"><!-- -->
                                                                     <tr>
-                                                                        <td class="nl2go-responsive-hide" width="10"
-                                                                            style="font-size: 0px; line-height: 1px;">­
+                                                                        <td class="nl2go-responsive-hide" width="10" style="font-size: 0px; line-height: 1px;">­
                                                                         </td>
                                                                         <td valign="top" class="r7-i">
-                                                                            <table width="100%" cellspacing="0"
-                                                                                cellpadding="0" border="0"
-                                                                                role="presentation">
+                                                                            <table width="100%" cellspacing="0" cellpadding="0" border="0" role="presentation">
                                                                                 <tr>
                                                                                     <td class="r8-c" align="center">
-                                                                                        <table cellspacing="0"
-                                                                                            cellpadding="0" border="0"
-                                                                                            role="presentation"
-                                                                                            width="100%" class="r9-o"
-                                                                                            style="table-layout: fixed; width: 100%;">
+                                                                                        <table cellspacing="0" cellpadding="0" border="0" role="presentation" width="100%" class="r9-o" style="table-layout: fixed; width: 100%;">
                                                                                             <tr
                                                                                                 class="nl2go-responsive-hide">
                                                                                                 <td height="20"
                                                                                                     width="30"
                                                                                                     style="font-size: 20px; line-height: 20px;">
-                                                                                                    ­ </td>
+                                                                                                    </td>
                                                                                                 <td height="20"
                                                                                                     style="font-size: 20px; line-height: 20px;">
-                                                                                                    ­</td>
+                                                                                                    </td>
                                                                                                 <td height="20"
                                                                                                     width="30"
                                                                                                     style="font-size: 20px; line-height: 20px;">
-                                                                                                    ­ </td>
+                                                                                                    </td>
                                                                                             </tr>
                                                                                             <tr>
                                                                                                 <td class="nl2go-responsive-hide"
                                                                                                     width="30"
                                                                                                     style="font-size: 0px; line-height: 1px;">
-                                                                                                    ­ </td>
+                                                                                                    </td>
                                                                                                 <td align="center"
                                                                                                     class="r10-i nl2go-default-textstyle"
                                                                                                     style="color: #392f65; font-family: Roboto,Arial,Helvetica,sans-serif; font-size: 16px; line-height: 1.5; text-align: center;">
@@ -581,15 +570,14 @@
                                                                                                 <td class="nl2go-responsive-hide"
                                                                                                     width="30"
                                                                                                     style="font-size: 0px; line-height: 1px;">
-                                                                                                    ­ </td>
+                                                                                                    </td>
                                                                                             </tr>
                                                                                         </table>
                                                                                     </td>
                                                                                 </tr>
                                                                             </table>
                                                                         </td>
-                                                                        <td class="nl2go-responsive-hide" width="10"
-                                                                            style="font-size: 0px; line-height: 1px;">­
+                                                                        <td class="nl2go-responsive-hide" width="10" style="font-size: 0px; line-height: 1px;">
                                                                         </td>
                                                                     </tr>
                                                                 </table>
@@ -932,7 +920,7 @@
                                                                                                             <span
                                                                                                                 style="color: #ad8d59;"><strong>Stage
                                                                                                                     &amp;
-                                                                                                                    date</strong></span>
+                                                                                                                    option(s)</strong></span>
                                                                                                         </p>
                                                                                                     </div>
                                                                                                 </td>
@@ -959,12 +947,15 @@
                                                                                                     class="r24-i nl2go-default-textstyle"
                                                                                                     style="color: #392f65; font-family: Roboto,Arial,Helvetica,sans-serif; font-size: 16px; line-height: 1.5; text-align: left;">
                                                                                                     <div>
-                                                                                                        <p
-                                                                                                            style="margin: 0;">
-                                                                                                            <span
-                                                                                                                style="color: #ffffff;"> [test]                                                                                                        </span>
+                                                                                                        <p style="margin: 0;">
+                                                                                                            <span style="color: #ffffff;">
+                                                                                                            <% @order.order_items.each do |item| %>
+                                                                                                                - <%= item.driving_course.title %>
+                                                                                                                <br>
+                                                                                                            <% end %>
+                                                                                                            </span>
                                                                                                         </p>
-                                                                                                    </div>
+                                                                                                    </div>          
                                                                                                 </td>
                                                                                             </tr>
                                                                                             <tr
@@ -1149,11 +1140,7 @@
                                                                                                         <p
                                                                                                             style="margin: 0;">
                                                                                                             <span
-                                                                                                                style="color: #FFFFFF;">Lorem
-                                                                                                                ipsum
-                                                                                                                dolor
-                                                                                                                sit
-                                                                                                                amet, </span>
+                                                                                                                style="color: #FFFFFF;">Carte Bancaire </span>
                                                                                                         </p>
                                                                                                     </div>
                                                                                                 </td>
@@ -1230,7 +1217,7 @@
                                                                                                     <div>
                                                                                                         <div class="nl2go_class_14_white_b"
                                                                                                             style="color: #fff; font-family: Roboto,Arial,Helvetica,sans-serif; font-size: 14px; font-weight: 700;">
-                                                                                                            The Classic
+                                                                                                            Classic
                                                                                                             Racing
                                                                                                             School</div>
                                                                                                     </div>

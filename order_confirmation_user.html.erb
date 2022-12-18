@@ -1002,7 +1002,7 @@
                                                                                                     style="color: #392f65; font-family: Roboto,Arial,Helvetica,sans-serif; font-size: 16px; line-height: 1.5; text-align: left;">
                                                                                                     <div>
                                                                                                         <p style="margin: 0; color: #677876; font-size: 18px;">
-                                                                                                            <span style="color: #ad8d59;"><strong>Stage & option(s)</strong></span>
+                                                                                                            <span style="color: #ad8d59;"><strong>Stage &amp; date</strong></span>
                                                                                                         </p>
                                                                                                     </div>
                                                                                                 </td>
@@ -1027,14 +1027,14 @@
                                                                                                     style="color: #392f65; font-family: Roboto,Arial,Helvetica,sans-serif; font-size: 16px; line-height: 1.5; text-align: left;">
                                                                                                     <div>
                                                                                                         <p style="margin: 0;">
-                                                                                                            <span style="color: #ffffff;">
-                                                                                                            <% @order.order_items.each do |item| %>
-                                                                                                                - <%= item.driving_course.title %>
-                                                                                                                <br>
-                                                                                                            <% end %>
+                                                                                                            <span style="color: #ffffff;">[nom du stage]
+                                                                                                                <% @order.order_items do |item| %>
+                                                                                                                    <%= item.driving_course.title %> - 
+                                                                                                                    <%= item.driving_course.date.strftime("le %d/%m/%Y") %>
+                                                                                                                <% end %>
                                                                                                             </span>
                                                                                                         </p>
-                                                                                                    </div>  
+                                                                                                    </div>
                                                                                                 </td>
                                                                                             </tr>
                                                                                             <tr
